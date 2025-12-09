@@ -1311,6 +1311,26 @@ body.modal-open {
     background: var(--color-bg);
 }
 
+/* Portfolio brand colors */
+.portfolio-hai {
+    background: #ff3304 !important;
+    color: white;
+}
+
+.portfolio-hva {
+    background: #251778 !important;
+}
+
+.portfolio-xxl {
+    background: #151515 !important;
+}
+
+.portfolio-hva img,
+.portfolio-xxl img {
+    background: transparent;
+    filter: brightness(0) invert(1);
+}
+
 .portfolio-overlay {
     position: absolute;
     inset: 0;
