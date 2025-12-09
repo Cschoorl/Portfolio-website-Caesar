@@ -477,6 +477,7 @@ p {
     }
 }
 
+
 .client-logo {
     display: flex;
     align-items: center;
@@ -669,7 +670,7 @@ body.modal-open {
     text-transform: none;
 }
 
-/* ===== Services Section - Carousel Style ===== */
+/* ===== Services Section ===== */
 .services-preview {
     padding: var(--space-4xl) var(--space-xl);
     background: var(--color-bg-secondary);
@@ -695,57 +696,87 @@ body.modal-open {
 
 .section-header h2 {
     color: var(--color-text-primary);
+    font-size: clamp(2rem, 4vw, 2.5rem);
 }
 
-.services-carousel {
-    display: flex;
-    gap: var(--space-lg);
-    overflow-x: auto;
-    padding: var(--space-md) var(--space-xl);
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    max-width: 100%;
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+    }
 }
 
-.services-carousel::-webkit-scrollbar {
-    display: none;
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
 }
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+}
+
+.section-header h2 {
+    color: var(--color-text-primary);
+}
+
 
 .services-grid {
-    display: flex;
-    gap: var(--space-lg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--space-xl);
 }
 
 .service-card {
-    flex: 0 0 350px;
     padding: var(--space-2xl);
     background: var(--color-bg);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
-    scroll-snap-align: start;
     transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .service-card:hover {
     border-color: var(--color-border-hover);
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     background: var(--color-bg-secondary);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-lg);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    transition: transform var(--transition-base);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
 }
 
 .service-card h3 {
@@ -756,8 +787,9 @@ body.modal-open {
 
 .service-card p {
     font-size: 0.9375rem;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: var(--space-lg);
+    flex-grow: 1;
 }
 
 .service-link {
@@ -765,46 +797,17 @@ body.modal-open {
     align-items: center;
     gap: var(--space-sm);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--color-text-primary);
-    transition: gap var(--transition-base);
+    transition: all var(--transition-base);
+    margin-top: auto;
 }
 
 .service-link:hover {
     gap: var(--space-md);
+    color: var(--color-text-secondary);
 }
 
-/* Carousel Navigation */
-.carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    margin-top: var(--space-2xl);
-}
-
-.carousel-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid var(--color-border);
-    background: var(--color-bg);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition-base);
-}
-
-.carousel-btn:hover {
-    background: var(--color-text-primary);
-    color: white;
-    border-color: var(--color-text-primary);
-}
-
-.carousel-btn svg {
-    width: 20px;
-    height: 20px;
-}
 
 /* ===== Portfolio Section ===== */
 .portfolio-preview {
