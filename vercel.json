@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/whatido", "destination": "/whatido.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" },
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/contact", "destination": "/contact.html" }
+  ],
+  "redirects": [
+    { "source": "/whatido.html", "destination": "/whatido", "permanent": true },
+    { "source": "/portfolio.html", "destination": "/portfolio", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/contact.html", "destination": "/contact", "permanent": true }
+  ]
+}
+
