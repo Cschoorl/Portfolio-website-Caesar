@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Caesar Schoorl</title>
+    <meta name="description" content="Articles and insights about AI, technology and the future of work. By Caesar Schoorl.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-text">Caesar Schoorl</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="wat-ik-doe.html">What I do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <span class="section-tag">Insights</span>
+            <h1>Blog</h1>
+            <p>Thoughts, articles and insights about AI, technology and how organizations can work smarter.</p>
+        </header>
+
+        <section class="blog-grid">
+            <article class="blog-card">
+                <a href="https://substack.com/home/post/p-180022328" target="_blank">
+                    <div class="blog-image">
+                        <img src="images/Foto Substeck Artiekel.png" alt="We've forgotten how learning works">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Substack</span>
+                            <span class="blog-date">Nov 26, 2025</span>
+                        </div>
+                        <h3>We've forgotten how learning works.</h3>
+                        <p class="blog-excerpt">In a world full of AI tools and instant answers, we've lost sight of the importance of deep learning. How can we use technology to truly grow instead of just consume?</p>
+                    </div>
+                </a>
+            </article>
+
+            <article class="blog-card">
+                <a href="https://www.frankwatching.com/archive/2025/11/13/de-drie-ai-fases-orkest/" target="_blank">
+                    <div class="blog-image">
+                        <img src="images/Frankwatching.png" alt="De 3 AI-fases: van dirigent naar zelfspelend orkest">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Frankwatching</span>
+                            <span class="blog-date">Nov 13, 2025</span>
+                        </div>
+                        <h3>De 3 AI-fases: van dirigent naar zelfspelend orkest</h3>
+                        <p class="blog-excerpt">AI bevindt zich op een kantelpunt: van uitvoerend gereedschap naar zelfdenkend systeem. Waar de mens nu nog de dirigent is, beweegt de technologie richting een wereld waarin het orkest zélf leert spelen.</p>
+                    </div>
+                </a>
+            </article>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Stay updated</h2>
+                <p>Follow me on Substack for weekly insights about AI and technology.</p>
+                <a href="https://substack.com/@caesarschoorl" class="btn btn-primary btn-large" target="_blank">
+                    Subscribe on Substack
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>Got a project in mind? Let's talk 👋</h3>
+            </div>
+            <div class="timezone-widget">
+                <span class="timezone-label">Timezone</span>
+                <div class="timezone-info">
+                    <span class="timezone-date" id="timezone-date">Dec 8, 2025</span>
+                    <span class="timezone-time" id="timezone-time">5:00 PM</span>
+                    <span class="timezone-city">Amsterdam</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 • All Rights Reserved @Caesar</p>
+        </div>
+    </footer>
+
+    <!-- Calendly Modal -->
+    <div class="modal-overlay" id="calendly-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

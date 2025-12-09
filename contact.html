@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Caesar Schoorl</title>
+    <meta name="description" content="Get in touch with Caesar Schoorl for AI workshops, automations or consultancy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-text">Caesar Schoorl</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="wat-ik-doe.html">What I do</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="nav-cta active">Contact</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <span class="section-tag">Say hello</span>
+            <h1>Contact</h1>
+            <p>Have a question, project or idea? I'd love to hear from you. Let's see how we can collaborate.</p>
+        </header>
+
+        <section class="contact-page">
+            <div class="contact-info">
+                <h2>Let's talk 👋</h2>
+                <p>Whether you're interested in a workshop, need help with AI automation, or just want to brainstorm about the possibilities of AI for your organization - I'm here for you.</p>
+                
+                <div class="contact-methods">
+                    <a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" class="contact-method">
+                        <div class="contact-method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-method-text">
+                            <h4>LinkedIn</h4>
+                            <p>caesar-schoorl-ai</p>
+                        </div>
+                    </a>
+                    
+                    <div class="contact-method">
+                        <div class="contact-method-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-method-text">
+                            <h4>Location</h4>
+                            <p>Amsterdam, The Netherlands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container" id="form-container">
+                <div id="success-message" style="display: none; text-align: center; padding: 3rem;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+                    <h3 style="margin-bottom: 0.5rem;">Message sent!</h3>
+                    <p>Thank you for your message. I'll get back to you as soon as possible.</p>
+                </div>
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/caesar.schoorl@gmail.com" method="POST">
+                    <!-- Formsubmit settings -->
+                    <input type="hidden" name="_subject" value="New message via your website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Update this URL when you have your domain -->
+                    <input type="hidden" name="_next" value="http://localhost:8080/contact.html?success=true">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company (optional)</label>
+                        <input type="text" id="company" name="company" placeholder="Your company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me more about your project or question..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                        Send message
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="cta-section" style="padding-top: 0;">
+            <div class="cta-content">
+                <h2>Prefer a direct conversation?</h2>
+                <p>Schedule a free introductory call and let's discuss how I can help.</p>
+                <a href="#" class="btn btn-primary btn-large open-calendly">
+                    Plan a call
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <h3>Got a project in mind? Let's talk 👋</h3>
+            </div>
+            <div class="timezone-widget">
+                <span class="timezone-label">Timezone</span>
+                <div class="timezone-info">
+                    <span class="timezone-date" id="timezone-date">Dec 8, 2025</span>
+                    <span class="timezone-time" id="timezone-time">5:00 PM</span>
+                    <span class="timezone-city">Amsterdam</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 • All Rights Reserved @Caesar</p>
+        </div>
+    </footer>
+
+    <!-- Calendly Modal -->
+    <div class="modal-overlay" id="calendly-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <script src="script.js"></script>
+    <script>
+        // Check for success parameter in URL
+        if (window.location.search.includes('success=true')) {
+            document.getElementById('contact-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            // Clean up URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+</body>
+</html>
