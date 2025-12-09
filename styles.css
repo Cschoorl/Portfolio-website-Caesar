@@ -1308,7 +1308,7 @@ body.modal-open {
     height: 100%;
     object-fit: contain;
     padding: var(--space-xl);
-    background: var(--color-bg);
+    background: transparent;
 }
 
 /* Portfolio brand colors */
@@ -1329,6 +1329,8 @@ body.modal-open {
 .portfolio-xxl img {
     background: transparent;
     filter: brightness(0) invert(1);
+    opacity: 1;
+    padding: var(--space-2xl);
 }
 
 .portfolio-overlay {
