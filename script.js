@@ -158,18 +158,16 @@ function initCalendlyModal() {
 
 // Portfolio Expand on Click
 function initPortfolioExpand() {
-    const portfolioCards = document.querySelectorAll('.portfolio-card');
+    const portfolioExcerpts = document.querySelectorAll('.portfolio-excerpt');
     
-    portfolioCards.forEach(card => {
-        const fullText = card.querySelector('.portfolio-full');
-        if (!fullText) return;
+    portfolioExcerpts.forEach(excerpt => {
+        const textWrapper = excerpt.closest('.portfolio-text-wrapper');
+        if (!textWrapper) return;
         
         // Show full text on click
-        card.addEventListener('click', (e) => {
-            // Don't trigger if clicking on links
-            if (e.target.closest('a')) return;
-            
-            card.classList.toggle('expanded');
+        excerpt.addEventListener('click', (e) => {
+            e.stopPropagation();
+            textWrapper.classList.toggle('expanded');
         });
     });
 }
