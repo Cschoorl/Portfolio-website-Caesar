@@ -677,6 +677,15 @@ body.modal-open {
     text-transform: none;
 }
 
+/* Beeckestijn - Professional, uppercase (matching logo style) */
+.client-logo:nth-child(9),
+.client-logo:nth-child(17) {
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 /* ===== Services Section ===== */
 .services-preview {
     padding: var(--space-4xl) var(--space-xl);
