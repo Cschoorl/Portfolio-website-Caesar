@@ -167,16 +167,16 @@ function initCalendlyModal() {
 
 // Portfolio Expand on Click
 function initPortfolioExpand() {
-    const portfolioExcerpts = document.querySelectorAll('.portfolio-excerpt');
+    const readMoreButtons = document.querySelectorAll('.portfolio-read-more');
     
-    portfolioExcerpts.forEach(excerpt => {
-        const textWrapper = excerpt.closest('.portfolio-text-wrapper');
+    readMoreButtons.forEach(button => {
+        const textWrapper = button.closest('.portfolio-text-wrapper');
         if (!textWrapper) return;
         
         // Show full text on click
-        excerpt.addEventListener('click', (e) => {
+        button.addEventListener('click', (e) => {
             e.stopPropagation();
-            textWrapper.classList.toggle('expanded');
+            textWrapper.classList.add('expanded');
         });
     });
 }
