@@ -12,3 +12,6 @@ RewriteRule ^ /%1? [NC,L,R=301]
 
 
 
+
+
+
