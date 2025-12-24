@@ -1129,6 +1129,89 @@ body.modal-open {
 
 /* ===== Additional Page Styles ===== */
 
+/* Who I Am Section (on What I do page) */
+.who-i-am-section {
+    padding: var(--space-4xl) var(--space-xl);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.who-i-am-card {
+    background: var(--color-bg);
+    border: 2px solid var(--color-text-primary);
+    border-radius: var(--radius-xl);
+    padding: var(--space-3xl);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.who-i-am-image {
+    aspect-ratio: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 3px solid var(--color-text-primary);
+}
+
+.who-i-am-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.who-i-am-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.who-i-am-content .section-tag {
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+.who-i-am-content h2 {
+    margin-bottom: var(--space-sm);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.who-i-am-content p {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+}
+
+.who-i-am-roles {
+    display: flex;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+}
+
+.role-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.role-label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.role-company {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: 0.02em;
+}
+
 /* About/Services Page */
 .services-page {
     padding: var(--space-3xl) var(--space-xl);
@@ -1649,6 +1732,16 @@ body.modal-open {
 
 /* ===== Mobile Responsive Styles ===== */
 @media (max-width: 1024px) {
+    .who-i-am-card {
+        grid-template-columns: 250px 1fr;
+        gap: var(--space-2xl);
+        padding: var(--space-2xl);
+    }
+    
+    .who-i-am-roles {
+        gap: var(--space-xl);
+    }
+    
     .services-page {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-2xl);
@@ -1926,6 +2019,35 @@ body.modal-open {
     }
     
     /* Services Page */
+    .who-i-am-section {
+        padding: var(--space-2xl) var(--space-lg);
+    }
+    
+    .who-i-am-card {
+        grid-template-columns: 1fr;
+        padding: var(--space-xl);
+        gap: var(--space-xl);
+        text-align: center;
+    }
+    
+    .who-i-am-image {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .who-i-am-content {
+        align-items: center;
+    }
+    
+    .who-i-am-content .section-tag {
+        align-self: center;
+    }
+    
+    .who-i-am-roles {
+        justify-content: center;
+        gap: var(--space-lg);
+    }
+    
     .services-page {
         padding: var(--space-2xl) var(--space-lg);
     }
