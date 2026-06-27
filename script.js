@@ -92,9 +92,9 @@ function initNavbarScroll() {
     if (navbar) {
         window.addEventListener('scroll', () => {
             if (window.pageYOffset > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.background = 'rgba(232, 231, 223, 0.96)';
             } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.9)';
+                navbar.style.background = 'rgba(232, 231, 223, 0.9)';
             }
         });
     }

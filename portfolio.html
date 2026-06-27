@@ -4,380 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Portfolio | Caesar Schoorl</title>
-    <meta name="description" content="Projects, hackathons and collaborations by Caesar Schoorl. From Europe's biggest hackathon to AI workshops at ING, Achmea and Rabobank.">
+    <meta name="description" content="Projects, hackathons and client work by Caesar Schoorl — AI consultant, trainer and builder.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <nav class="navbar">
-        <a href="/" class="logo">
-            <span class="logo-text">Caesar Schoorl</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="/portfolio" class="active">Portfolio</a></li>
-            <li><a href="/whatido">Cool Stance</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/contact" class="nav-cta">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-btn" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="navbar-inner">
+            <a href="/" class="logo">
+                <span class="logo-text">Caesar Schoorl</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/portfolio" class="active">Portfolio</a></li>
+                <li><a href="/whatido">Cool Stance</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <main>
-        <header class="portfolio-editorial-header">
-            <span class="section-tag">Work & Projects</span>
-            <h1>Things I've<br>built & done.</h1>
-            <p>Workshops, hackathons, side-projects, and the occasional impossible dream. Here's a selection of what I've been up to.</p>
-        </header>
+    <div style="padding-top: 52px;">
+        <main class="page-col">
 
-        <!-- Featured Projects -->
-        <section class="featured-projects-section">
-            <div class="section-label-row">
-                <span class="section-tag">Featured</span>
-            </div>
+            <!-- Header -->
+            <header class="page-header-df">
+                <span class="page-label">Work</span>
+                <h1>Things I've built & done.</h1>
+                <p>A collection of projects, hackathons, client work and experiments. Most of them are the kind of thing people said couldn't be done.</p>
+            </header>
 
-            <!-- Row 1: Megathon (large) + Impossible Dream -->
-            <div class="featured-projects-grid" style="margin-bottom: var(--space-xl);">
-                <article class="project-card">
-                    <div class="project-card-hero bg-tree" style="min-height: 280px;">
-                        <span class="project-card-badge">Hackathon · Europe</span>
-                        <h3 class="project-card-title-white">Megathon —<br>Europe's Biggest Hackathon</h3>
-                        <span class="project-card-number">01</span>
+            <!-- Featured: big projects -->
+            <section class="section-df" style="border-top: none;">
+                <h2 class="section-title-df">Featured projects</h2>
+                <div class="project-grid-df" style="margin-bottom: 0.5rem;">
+                    <div class="project-thumb pt-tree" style="aspect-ratio: 4/3;">
+                        <span class="project-thumb-tag">Hackathon</span>
+                        <span class="project-thumb-label">Megathon — Europe's Biggest Hackathon</span>
                     </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">Mollie</span>
-                            <span class="project-tag">Peak</span>
-                            <span class="project-tag">OpenAI</span>
-                            <span class="project-tag">AIM</span>
-                        </div>
-                        <p>Organized the biggest hackathon in Europe together with Mollie, Peak, OpenAI, AIM, and other partners. Hundreds of builders, one weekend, zero excuses. The kind of event that reminds you what humans are capable of when they stop overthinking and start building.</p>
+                    <div class="project-thumb pt-creek" style="aspect-ratio: 4/3;">
+                        <span class="project-thumb-tag">Mission · Ongoing</span>
+                        <span class="project-thumb-label">The Impossible Dream</span>
                     </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-card-hero bg-creek" style="min-height: 280px;">
-                        <span class="project-card-badge">Mission · Ongoing</span>
-                        <h3 class="project-card-title-white">The Impossible Dream</h3>
-                        <span class="project-card-number">02</span>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">ING</span>
-                            <span class="project-tag">Achmea</span>
-                            <span class="project-tag">Rabobank</span>
-                            <span class="project-tag">+more</span>
-                        </div>
-                        <p>Training 1.000 people at 1.000 companies in AI. A commitment, not a campaign. Focus on AI, practical applications, data, workflows, and how businesses can work smarter. Already trained at ING, Achmea, Rabobank, OrangeFit, Tushby, Josh V, International Flexjobs, and counting.</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Row 2: Three smaller cards -->
-            <div class="featured-projects-grid three-col" style="margin-bottom: var(--space-xl);">
-                <article class="project-card">
-                    <div class="project-card-hero bg-sand">
-                        <span class="project-card-badge">Hackathon</span>
-                        <h3 class="project-card-title-white">Hackathon<br>× Mollie</h3>
-                        <span class="project-card-number">03</span>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">Mollie</span>
-                            <span class="project-tag">Fintech</span>
-                        </div>
-                        <p>Co-organized a hackathon together with Mollie — bringing together developers, designers, and product thinkers to build new things fast.</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-card-hero bg-grass">
-                        <span class="project-card-badge">Hackathon</span>
-                        <h3 class="project-card-title-white">Hackathon<br>× Netlify</h3>
-                        <span class="project-card-number">04</span>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">Netlify</span>
-                            <span class="project-tag">Web</span>
-                        </div>
-                        <p>Co-organized a hackathon together with Netlify — focused on modern web development and shipping creative ideas under time pressure.</p>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-card-hero bg-sky">
-                        <span class="project-card-badge">Education · Singapore</span>
-                        <h3 class="project-card-title-white">NTU<br>Singapore</h3>
-                        <span class="project-card-number">05</span>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">Data Science</span>
-                            <span class="project-tag">ML</span>
-                            <span class="project-tag">NTU</span>
-                        </div>
-                        <p>Mini-study at Nanyang Technological University in Singapore — focused on data science and machine learning. One continent, a lot of learning.</p>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Row 3: Upcoming Camino project -->
-            <div class="featured-projects-grid" style="grid-template-columns: 1fr;">
-                <article class="project-card">
-                    <div class="project-card-hero bg-charcoal" style="min-height: 200px;">
-                        <span class="project-card-badge upcoming">Coming soon</span>
-                        <h3 class="project-card-title-white">120 km of the Camino — building an AI app for mental health along the way</h3>
-                        <span class="project-card-number">06</span>
-                    </div>
-                    <div class="project-card-body">
-                        <div class="project-card-meta">
-                            <span class="project-tag">AI</span>
-                            <span class="project-tag">Mental Health</span>
-                            <span class="project-tag">120 km</span>
-                            <span class="project-tag">Camino</span>
-                        </div>
-                        <p>Walking 120 km of the Camino de Santiago. No office, no meetings — just trail, reflection, and building an AI app for mental health on the go. Because the best ideas don't come from behind a screen.</p>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- Client Work -->
-        <section class="training-strip">
-            <span class="training-strip-label">Trained at</span>
-            <div class="training-companies-list">
-                <span class="training-company-chip">ING</span>
-                <span class="training-company-chip">Achmea</span>
-                <span class="training-company-chip">Rabobank</span>
-                <span class="training-company-chip">OrangeFit</span>
-                <span class="training-company-chip">Tushby</span>
-                <span class="training-company-chip">Josh V</span>
-                <span class="training-company-chip">International Flexjobs</span>
-                <span class="training-company-chip">Miele</span>
-                <span class="training-company-chip">HvA</span>
-                <span class="training-company-chip">INretail</span>
-                <span class="training-company-chip">Beeckestijn</span>
-            </div>
-        </section>
-
-        <div class="client-work-section">
-            <div class="client-work-header">
-                <span class="section-tag">Client work</span>
-            </div>
-            <div class="portfolio-grid">
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/HAI Agency.png" alt="HAI Agency">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.haiagency.nl" target="_blank" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Automation</span>
-                            <span class="portfolio-tag">Custom Solution</span>
-                        </div>
-                        <h3>HAI Agency</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">I created a custom AI automation for HAI that streamlines one of their internal workflows and supports several of their core business processes.</p>
-                            <p class="portfolio-full">The solution identifies inefficiencies, automates repetitive tasks, and provides clear, data-driven guidance to the team. This enables HAI to operate with greater accuracy, consistency, and speed, empowering the company to scale without the need to hire additional staff while allowing employees to focus on higher-impact work.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/Logo Miele.png" alt="Miele">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.miele.nl" target="_blank" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Training</span>
-                            <span class="portfolio-tag">Enterprise</span>
-                        </div>
-                        <h3>Miele</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">I delivered a training session at the Miele HQ focused on how to use AI effectively without any technical background.</p>
-                            <p class="portfolio-full">During the session, participants explored practical ways to integrate AI into their daily work, learned to formulate clear prompts, and discovered how simple it can be to automate recurring tasks. The training empowered employees to work smarter, make better use of available tools, and unlock new efficiencies across the organization without requiring technical expertise but with an ethical understanding.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/Logo HvA.png" alt="Hogeschool van Amsterdam">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.hva.nl" target="_blank" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Training</span>
-                            <span class="portfolio-tag">Education</span>
-                        </div>
-                        <h3>HvA</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">I have delivered multiple training sessions at the Amsterdam University of Applied Sciences for both lecturers and students.</p>
-                            <p class="portfolio-full">These sessions covered topics such as AI and ethics, AI for content creation, conversational AI, and the foundational principles of artificial intelligence. Each training provided practical insights, hands-on examples, and clear guidance on how to apply AI responsibly and effectively within education. The sessions helped participants build confidence, deepen their understanding, and discover new opportunities to enhance their work with AI.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/Logo XXL.png" alt="XXL Nutrition">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.xxlnutrition.com" target="_blank" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Consultancy</span>
-                            <span class="portfolio-tag">Strategy</span>
-                        </div>
-                        <h3>XXL Nutrition</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">I conducted a consultancy session for XXL Nutrition to analyse their current workflows and identify opportunities to integrate AI within their organisation.</p>
-                            <p class="portfolio-full">During the session, we mapped out key processes, uncovered inefficiencies, and explored practical applications of AI that could enhance productivity, reduce manual workload, and support smarter decision-making. The insights provided a clear direction for how XXL Nutrition can leverage AI to strengthen operations and prepare for scalable growth.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/Logo inretail.png" alt="INretail">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.inretail.nl" target="_blank" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Training</span>
-                            <span class="portfolio-tag">Entrepreneurship</span>
-                        </div>
-                        <h3>INretail</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">I delivered a training session at the INretail HQ focused on smarter entrepreneurship with AI.</p>
-                            <p class="portfolio-full">The session was designed for a diverse group of entrepreneurs and business owners, guiding them through practical ways to apply AI in their daily operations. Participants learned how AI can streamline workflows, improve decision-making, and unlock new opportunities for growth. The training equipped them with accessible tools and insights to immediately start using AI to strengthen their businesses.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="portfolio-card">
-                    <div class="portfolio-image">
-                        <img src="images/logos/Logo Beeckestijn.png" alt="Beeckestijn Business School">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.beeckestijn.org/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-small">View client</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-tags">
-                            <span class="portfolio-tag">Training</span>
-                            <span class="portfolio-tag">Education</span>
-                        </div>
-                        <h3>Beeckestijn Business School</h3>
-                        <div class="portfolio-text-wrapper">
-                            <p class="portfolio-excerpt">As a lecturer at Beeckestijn Business School, I delivered a practice-driven training focused on AI, vibecoding, and automations for working professionals.</p>
-                            <p class="portfolio-full">Rather than centering on technology itself, the sessions emphasized practical application in everyday professional contexts. The training combined strategic insight with hands-on experimentation. Participants learned how vibecoding enables rapid translation of ideas into functional prototypes, and how smart automations can eliminate repetitive tasks, creating space for creativity and high-value decision-making. AI was positioned as an extension of human thinking — accessible, actionable, and tailored to real organizational challenges.</p>
-                            <button class="portfolio-read-more">
-                                Read the case
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <section class="cta-section">
-            <div class="cta-content">
-                <div class="cta-badge">
-                    <span class="dot"></span>
-                    Ready for new projects
                 </div>
-                <h2>Shall we collaborate?</h2>
-                <p>I'm always open to new projects and interesting collaborations.</p>
-                <a href="/contact" class="btn btn-primary btn-large">
-                    Get in touch
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-main">
-                <h3>Got a project in mind? Let's talk</h3>
-            </div>
-            <div class="timezone-widget">
-                <span class="timezone-label">Timezone</span>
-                <div class="timezone-info">
-                    <span class="timezone-date" id="timezone-date">Dec 8, 2025</span>
-                    <span class="timezone-time" id="timezone-time">5:00 PM</span>
-                    <span class="timezone-city">Amsterdam</span>
+                <div class="project-grid-df cols-3">
+                    <div class="project-thumb pt-sand">
+                        <span class="project-thumb-tag">Hackathon</span>
+                        <span class="project-thumb-label">× Mollie</span>
+                    </div>
+                    <div class="project-thumb pt-grass">
+                        <span class="project-thumb-tag">Hackathon</span>
+                        <span class="project-thumb-label">× Netlify</span>
+                    </div>
+                    <div class="project-thumb pt-sky">
+                        <span class="project-thumb-tag">Education</span>
+                        <span class="project-thumb-label">NTU Singapore</span>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 • All Rights Reserved @Caesar</p>
-        </div>
-    </footer>
+                <div class="project-grid-df" style="margin-top: 0.5rem;">
+                    <div class="project-thumb pt-charcoal" style="grid-column: 1 / -1; aspect-ratio: 21/6;">
+                        <span class="project-thumb-tag">Coming soon</span>
+                        <span class="project-thumb-label">Camino 120 km — AI for Mental Health</span>
+                    </div>
+                </div>
+            </section>
 
+            <!-- Training companies strip -->
+            <section class="section-df">
+                <h2 class="section-title-df">Trained at</h2>
+                <p style="font-size: 0.875rem; color: var(--text-2); margin-bottom: 1rem; line-height: 1.55;">As part of <em>The Impossible Dream</em> — 1.000 people, 1.000 companies in AI. Currently in progress.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">ING</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Achmea</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Rabobank</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">OrangeFit</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Tushby</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Josh V</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">International Flexjobs</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Miele</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">HvA</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">INretail</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Beeckestijn</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">FleuraMetz</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">XXL Nutrition</span>
+                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">+ many more</span>
+                </div>
+            </section>
+
+            <!-- Client portfolio -->
+            <section class="section-df">
+                <h2 class="section-title-df">Client work</h2>
+                <div class="portfolio-df-grid">
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/HAI_Agency_logo.svg" alt="HAI Agency">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">AI Consultancy</span>
+                                <span class="portfolio-df-tag">Strategy</span>
+                            </div>
+                            <h3>HAI Agency</h3>
+                            <p>AI strategy and implementation for a creative agency — building smarter content workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/miele_logo.svg" alt="Miele">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">Training</span>
+                                <span class="portfolio-df-tag">Workshop</span>
+                            </div>
+                            <h3>Miele</h3>
+                            <p>AI training for teams at Miele — practical tools and workflows for a global brand.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/HvA_logo.svg" alt="Hogeschool van Amsterdam">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">Education</span>
+                                <span class="portfolio-df-tag">AI Ethics</span>
+                            </div>
+                            <h3>Hogeschool van Amsterdam</h3>
+                            <p>AI education and ethics modules for students and faculty at HvA.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/xxl_nutrition_logo.svg" alt="XXL Nutrition">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">AI Automation</span>
+                                <span class="portfolio-df-tag">E-commerce</span>
+                            </div>
+                            <h3>XXL Nutrition</h3>
+                            <p>AI-powered content and marketing automation for one of Europe's largest sports nutrition brands.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/INretail_logo.svg" alt="INretail">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">Training</span>
+                                <span class="portfolio-df-tag">Retail AI</span>
+                            </div>
+                            <h3>INretail</h3>
+                            <p>AI training for retail professionals — practical applications for store operations and customer engagement.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-df-card">
+                        <div class="portfolio-df-img">
+                            <img src="images/logos/Beeckestijn_logo.svg" alt="Beeckestijn Business School">
+                        </div>
+                        <div class="portfolio-df-body">
+                            <div class="portfolio-df-tags">
+                                <span class="portfolio-df-tag">Lecturing</span>
+                                <span class="portfolio-df-tag">Business School</span>
+                            </div>
+                            <h3>Beeckestijn Business School</h3>
+                            <p>AI lecturer at Beeckestijn — teaching marketing professionals how AI reshapes their field.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer-df">
+            <p class="footer-copy">© 2026 Caesar Schoorl</p>
+            <div class="footer-tz">
+                <span class="tz-dot"></span>
+                <span id="tz-time">–</span>
+                <span>Amsterdam</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Calendly Modal -->
     <div class="modal-overlay" id="calendly-modal">
         <div class="modal-content">
             <button class="modal-close" id="modal-close" aria-label="Close">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"/>
-                </svg>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
             <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
         </div>
     </div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
     <script src="script.js"></script>
+    <script>
+        function updateTime() {
+            const el = document.getElementById('tz-time');
+            if (!el) return;
+            el.textContent = new Date().toLocaleTimeString('en-NL', {
+                timeZone: 'Europe/Amsterdam',
+                hour: '2-digit', minute: '2-digit'
+            });
+        }
+        updateTime();
+        setInterval(updateTime, 30000);
+    </script>
 </body>
 </html>
