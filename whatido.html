@@ -2,206 +2,231 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <title>Cool Stance | Caesar Schoorl</title>
-    <meta name="description" content="AI workshops, automations and consultancy. The impossible dream: 1.000 people at 1.000 companies trained in AI.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Stance — Caesar Schoorl</title>
+    <meta name="description" content="AI workshops, automations and consultancy by Caesar Schoorl. Doing the impossible with AI.">
+    <meta name="theme-color" content="#0a0b0a">
+    <meta property="og:title" content="Cool Stance — Caesar Schoorl">
+    <meta property="og:description" content="AI workshops, automations and consultancy by Caesar Schoorl. Doing the impossible with AI.">
+    <meta property="og:image" content="/images/web/profile.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="navbar-inner">
-            <a href="/" class="logo">
-                <span class="logo-text">Caesar Schoorl</span>
+            <a href="/" class="logo" aria-label="Caesar Schoorl — home">
+                <span class="logo-mark" aria-hidden="true"></span>
+                Caesar Schoorl
             </a>
             <ul class="nav-links">
-                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/portfolio">Work</a></li>
                 <li><a href="/whatido" class="active">Cool Stance</a></li>
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/contact" class="nav-cta">Contact</a></li>
+                <li><a href="/blog">Writing</a></li>
+                <li><a href="/contact" class="btn btn-light btn-sm">Let's talk</a></li>
             </ul>
-            <button class="mobile-menu-btn" aria-label="Menu">
+            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </nav>
 
-    <div style="padding-top: 52px;">
-        <main class="page-col">
+    <main>
 
-            <!-- Header -->
-            <header class="page-header-df">
-                <span class="page-label">Cool Stance</span>
-                <h1>"Doing the impossible with AI."</h1>
-                <p>AI is not the future. It's a tool. And everyone deserves to know how to use it. That's why I train, build, consult, and occasionally organize the biggest hackathon in Europe.</p>
-            </header>
-
-            <!-- Services -->
-            <section class="section-df" style="border-top: none;">
-                <h2 class="section-title-df">What I do</h2>
-
-                <div class="service-df">
-                    <p class="service-df-label">Training</p>
-                    <p class="service-df-title">AI Workshops</p>
-                    <p class="service-df-desc">Practical, hands-on training across AI fundamentals, prompting, AI for marketing, ethics and sector-specific applications. Tailor made. No slides without substance.</p>
-                    <ul class="service-df-features">
-                        <li class="service-df-feature">AI Fundamentals & Basics</li>
-                        <li class="service-df-feature">Effective Prompting & ChatGPT</li>
-                        <li class="service-df-feature">AI for Marketing & Content</li>
-                        <li class="service-df-feature">AI Ethics & Responsible Use</li>
-                        <li class="service-df-feature">Sector-specific Applications</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-primary btn-sm">Request a workshop →</a>
-                </div>
-
-                <div class="service-df">
-                    <p class="service-df-label">Efficiency</p>
-                    <p class="service-df-title">AI Automations</p>
-                    <p class="service-df-desc">AI automations streamline repetitive workflows, reduce errors, and create more efficient processes — from marketing and sales to HR and customer support.</p>
-                    <ul class="service-df-features">
-                        <li class="service-df-feature">Workflow Automation</li>
-                        <li class="service-df-feature">Data Processing & Analysis</li>
-                        <li class="service-df-feature">Content Generation Pipelines</li>
-                        <li class="service-df-feature">Customer Support AI</li>
-                        <li class="service-df-feature">Integrations & APIs</li>
-                    </ul>
-                    <a href="/contact" class="btn btn-primary btn-sm">Let's talk →</a>
-                </div>
-
-                <div class="service-df">
-                    <p class="service-df-label">Strategy</p>
-                    <p class="service-df-title">AI Consultancy</p>
-                    <p class="service-df-desc">I guide companies by analysing scenarios to reveal impactful AI opportunities — then build custom solutions and provide training to support confident adoption.</p>
-                    <ul class="service-df-features">
-                        <li class="service-df-feature">AI Readiness Assessment</li>
-                        <li class="service-df-feature">Use Case Identification</li>
-                        <li class="service-df-feature">Custom AI Tool Development</li>
-                        <li class="service-df-feature">Implementation Guidance</li>
-                        <li class="service-df-feature">AI Strategy & Roadmap</li>
-                    </ul>
-                    <button class="btn btn-primary btn-sm open-calendly">Plan a call →</button>
-                </div>
-            </section>
-
-            <!-- Training track record -->
-            <section class="section-df">
-                <h2 class="section-title-df">The Impossible Dream</h2>
-                <p style="font-size: 0.875rem; color: var(--text-2); margin-bottom: 1rem; line-height: 1.55;">Training 1.000 people at 1.000 companies in AI. A mission in progress — here's who we've worked with so far.</p>
-
-                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">ING</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Achmea</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Rabobank</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">OrangeFit</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Tushby</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Josh V</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">International Flexjobs</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Miele</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">HvA</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">INretail</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">Beeckestijn</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">FleuraMetz</span>
-                    <span style="padding: 5px 12px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-family: var(--tight); font-size: 0.8125rem; font-weight: 500; color: var(--text-2);">XXL Nutrition</span>
-                </div>
-            </section>
-
-            <!-- Cool Stunts -->
-            <section class="section-df">
-                <h2 class="section-title-df">Cool Stunts</h2>
-                <p style="font-size: 0.875rem; color: var(--text-2); margin-bottom: 0.875rem;">Things I've done that I'm proud of.</p>
-                <div class="mini-grid">
-                    <div class="mini-card">
-                        <div class="mini-icon" style="background: #e4ebe1; font-weight: 700; font-family: var(--tight); font-size: 0.6875rem; color: var(--accent);">1.000</div>
-                        <p class="mini-title">The Impossible Dream</p>
-                        <p class="mini-desc">Training 1.000 people at 1.000 companies in AI. Focus on practical applications, data, and workflows. A mission very much in progress.</p>
-                        <span class="mini-tag">Ongoing</span>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-icon" style="background: #e5eae8;">🏟️</div>
-                        <p class="mini-title">Megathon</p>
-                        <p class="mini-desc">Europe's biggest hackathon. Organized with Mollie, Peak, OpenAI, AIM and other partners. Hundreds of builders, one weekend.</p>
-                        <span class="mini-tag">Hackathon</span>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-icon" style="background: #f3ede0;">🤝</div>
-                        <p class="mini-title">Hackathons × Mollie & Netlify</p>
-                        <p class="mini-desc">Co-organized hackathons with Mollie and Netlify. Two ecosystems, one spirit: build something real, fast, and meaningful.</p>
-                        <span class="mini-tag">×2 Events</span>
-                    </div>
-                    <div class="mini-card">
-                        <div class="mini-icon" style="background: #e8eff5;">🎓</div>
-                        <p class="mini-title">NTU Singapore</p>
-                        <p class="mini-desc">Mini-study at Nanyang Technological University — data science and machine learning. One continent, a lot of learning.</p>
-                        <span class="mini-tag">Education</span>
-                    </div>
-                    <div class="mini-card upcoming" style="grid-column: 1 / -1;">
-                        <div class="mini-icon" style="background: rgba(42,55,35,0.1);">🏔️</div>
-                        <p class="mini-title">Camino — 120 km & AI for Mental Health</p>
-                        <p class="mini-desc">Walking 120 km of the Camino de Santiago and building an AI app for mental health along the way. No office, no meetings, just trail and code.</p>
-                        <span class="mini-tag">Coming soon</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About / Who I Am -->
-            <section class="section-df">
-                <h2 class="section-title-df">Who I am</h2>
-                <div class="exp-card" style="align-items: center;">
-                    <img src="images/profile.png" alt="Caesar Schoorl" style="width: 38px; height: 38px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 1px solid var(--border);">
-                    <div>
-                        <p class="exp-title">Caesar Schoorl</p>
-                        <p class="exp-loc">Amsterdam, NL · WAISE · Lerai · Beeckestijn · Josh V · International Flexjobs</p>
-                        <p class="exp-desc">I help organizations apply AI in a practical and responsible way. With a passion for technology, I bridge the gap between complex AI capabilities and real-world business applications. Building things that matter. Training the people who build them.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA -->
-            <section class="section-df">
-                <div style="text-align: center; padding: 1.5rem 0;">
-                    <p style="font-family: var(--tight); font-size: 0.8125rem; color: var(--text-3); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em;">Ready for new projects</p>
-                    <p style="font-family: var(--tight); font-size: 1.125rem; font-weight: 600; color: var(--text-1); margin-bottom: 0.75rem; letter-spacing: -0.02em;">Let's build something impossible.</p>
-                    <a href="/contact" class="btn btn-primary">Get in touch →</a>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="footer-df">
-            <p class="footer-copy">© 2026 Caesar Schoorl</p>
-            <div class="footer-tz">
-                <span class="tz-dot"></span>
-                <span id="tz-time">–</span>
-                <span>Amsterdam</span>
+        <section class="page-hero">
+            <div class="aurora-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="wrap">
+                <span class="eyebrow">Cool Stance</span>
+                <h1 class="display">"Doing the <span class="serif glow">impossible</span> with AI."</h1>
+                <p class="lead">AI is not the future. It's a tool. And everyone deserves to know how to use it. That's why I train, build, consult and occasionally organize the biggest hackathon in Europe.</p>
             </div>
-        </footer>
-    </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">What I do</span>
+                        <h2 class="h2">Train. Automate.<br>Advise.</h2>
+                    </div>
+                    <p class="lead">Every engagement is tailor made. Here is what that usually looks like.</p>
+                </div>
+                <div class="rows">
+                    <div class="service-row reveal">
+                        <span class="row-date">01 — Training</span>
+                        <div>
+                            <h3 class="h3">AI Workshops</h3>
+                            <a href="/contact" class="btn btn-ghost btn-sm">Request a workshop <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <div>
+                            <p>Practical, hands-on training on AI fundamentals, prompting, AI for marketing, ethics and sector-specific applications. Tailor made. No slides without substance.</p>
+                            <div class="offer-list"><span class="chip">Fundamentals</span><span class="chip">Prompting</span><span class="chip">Marketing & Content</span><span class="chip">Ethics</span><span class="chip">Sector-specific</span></div>
+                        </div>
+                    </div>
+                    <div class="service-row reveal">
+                        <span class="row-date">02 — Efficiency</span>
+                        <div>
+                            <h3 class="h3">AI Automations</h3>
+                            <a href="/contact" class="btn btn-ghost btn-sm">Let's talk <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <div>
+                            <p>Automations that take over repetitive work, cut errors and speed up processes, from marketing and sales to HR and customer support.</p>
+                            <div class="offer-list"><span class="chip">Workflows</span><span class="chip">Data processing</span><span class="chip">Content pipelines</span><span class="chip">Support AI</span><span class="chip">Integrations</span></div>
+                        </div>
+                    </div>
+                    <div class="service-row reveal">
+                        <span class="row-date">03 — Strategy</span>
+                        <div>
+                            <h3 class="h3">AI Consultancy</h3>
+                            <a href="#" class="btn btn-ghost btn-sm open-calendly">Plan a call <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <div>
+                            <p>I analyse scenarios to find where AI makes the biggest impact, then build custom solutions and train teams so they adopt them with confidence.</p>
+                            <div class="offer-list"><span class="chip">Readiness</span><span class="chip">Use cases</span><span class="chip">Custom tools</span><span class="chip">Implementation</span><span class="chip">Roadmap</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cream">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">The Impossible Dream</span>
+                        <h2 class="h2"><span class="serif">1.000</span> people.<br><span class="serif">1.000</span> companies.</h2>
+                    </div>
+                    <p class="lead">Training 1.000 people at 1.000 companies in AI. Focus on practical applications, data and workflows. A mission in progress, and these are the people I've worked with so far.</p>
+                </div>
+                <div class="name-cloud reveal"><span class="chip">ING</span><span class="chip">Achmea</span><span class="chip">Rabobank</span><span class="chip">Miele</span><span class="chip">Hogeschool van Amsterdam</span><span class="chip">XXL Nutrition</span><span class="chip">INretail</span><span class="chip">Beeckestijn</span><span class="chip">OrangeFit</span><span class="chip">Tushby</span><span class="chip">FleuraMetz</span><span class="chip">Josh V</span><span class="chip">International Flexjobs</span><span class="chip">HAI Agency</span><span class="chip" style="border-style:dashed">+ many more</span></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <div>
+                        <span class="eyebrow">Cool stunts</span>
+                        <h2 class="h2">Things I'm proud of.</h2>
+                    </div>
+                </div>
+                <div class="project-grid">
+                    <article class="project wide reveal">
+                        <div class="project-bg bg-aurora"></div>
+                        <div class="project-top"><span class="tag">Hackathon</span></div>
+                        <div>
+                            <h3>Megathon</h3>
+                            <p>Europe's biggest hackathon. Organized with Mollie, Peak, OpenAI, AIM and other partners. Hundreds of builders, one weekend.</p>
+                        </div>
+                    </article>
+                    <article class="project narrow reveal">
+                        <div class="project-bg bg-forest"></div>
+                        <div class="project-top"><span class="tag">Mission · Ongoing</span></div>
+                        <div>
+                            <div class="project-big">1.000</div>
+                            <h3>The Impossible Dream</h3>
+                            <p>Training 1.000 people at 1.000 companies in AI.</p>
+                        </div>
+                    </article>
+                    <article class="project third reveal">
+                        <div class="project-bg bg-sand"></div>
+                        <div class="project-top"><span class="tag">Hackathon</span></div>
+                        <div><h3>Hackathons × Mollie & Netlify</h3><p>Two ecosystems, one spirit: build something real, fast and meaningful.</p></div>
+                    </article>
+                    <article class="project third reveal">
+                        <div class="project-bg bg-sky"></div>
+                        <div class="project-top"><span class="tag">Education</span></div>
+                        <div><h3>NTU Singapore</h3><p>Mini-study in data science and machine learning at Nanyang Technological University.</p></div>
+                    </article>
+                    <article class="project third reveal">
+                        <div class="project-bg bg-ember"></div>
+                        <div class="project-top"><span class="tag">Coming soon</span></div>
+                        <div><h3>Camino — 120 km</h3><p>Walking the Camino de Santiago and building an AI app for mental health along the way.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="wrap split">
+                <div class="split-media reveal"><img src="images/web/profile.jpg" alt="Caesar Schoorl" loading="lazy"></div>
+                <div class="reveal">
+                    <span class="eyebrow">Who I am</span>
+                    <h2 class="h2">Caesar Schoorl</h2>
+                    <p>I help organizations apply AI in a practical and responsible way. With a passion for technology, I bridge the gap between complex AI capabilities and real-world business applications.</p>
+                    <p>Building things that matter. Training the people who build them.</p>
+                    <div class="chips"><span class="chip">WAISE</span><span class="chip">Lerai</span><span class="chip">Beeckestijn</span><span class="chip">Josh V</span><span class="chip">International Flexjobs</span></div>
+                    <a href="/contact" class="btn btn-light">Get in touch <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="aurora-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="wrap reveal">
+                <span class="eyebrow">Available for projects</span>
+                <h2 class="display">Let's build something <span class="serif glow">impossible.</span></h2>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-light open-calendly"><span class="dot"></span>Plan a coffee call</a>
+                    <a href="/contact" class="btn btn-ghost">Send a message <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap">
+            <div class="footer-top">
+                <div>
+                    <a href="/" class="logo"><span class="logo-mark" aria-hidden="true"></span>Caesar Schoorl</a>
+                    <p>AI consultant, trainer and builder from Amsterdam. Helping people and organizations do the impossible with AI.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <ul>
+                        <li><a href="/portfolio">Work</a></li>
+                        <li><a href="/whatido">Cool Stance</a></li>
+                        <li><a href="/blog">Writing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
+                        <li><a href="#" class="open-calendly">Calendly</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Based in</h4>
+                    <ul>
+                        <li class="muted">Amsterdam, NL</li>
+                        <li class="muted footer-tz"><span class="tz-dot"></span><span class="tz-time">–</span> local time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-word" aria-hidden="true">Caesar Schoorl</div>
+            <div class="footer-bottom">
+                <span>© 2026 Caesar Schoorl</span>
+                <span>Doing the impossible with AI</span>
+            </div>
+        </div>
+    </footer>
 
     <!-- Calendly Modal -->
     <div class="modal-overlay" id="calendly-modal">
         <div class="modal-content">
-            <button class="modal-close" id="modal-close" aria-label="Close">
+            <button class="modal-close" aria-label="Close">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
             <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
         </div>
     </div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="script.js"></script>
-    <script>
-        function updateTime() {
-            const el = document.getElementById('tz-time');
-            if (!el) return;
-            el.textContent = new Date().toLocaleTimeString('en-NL', {
-                timeZone: 'Europe/Amsterdam',
-                hour: '2-digit', minute: '2-digit'
-            });
-        }
-        updateTime();
-        setInterval(updateTime, 30000);
-    </script>
 </body>
 </html>

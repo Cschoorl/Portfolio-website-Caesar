@@ -2,187 +2,123 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
-    initScrollAnimations();
     initNavbarScroll();
-    initTimezone();
+    initReveal();
+    initMarquee();
+    initClock();
     initCalendlyModal();
-    initPortfolioExpand();
+    initContactSuccess();
 });
 
 // Mobile Menu Toggle
 function initMobileMenu() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', () => {
-            const isActive = navLinks.classList.contains('active');
-            navLinks.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (!isActive) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
-            
-            const spans = mobileMenuBtn.querySelectorAll('span');
-            if (mobileMenuBtn.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
-            } else {
-                spans[0].style.transform = '';
-                spans[1].style.opacity = '';
-                spans[2].style.transform = '';
-            }
-        });
+    const btn = document.querySelector('.mobile-menu-btn');
+    const links = document.querySelector('.nav-links');
+    const navbar = document.querySelector('.navbar');
+    if (!btn || !links) return;
 
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
-                document.body.style.overflow = '';
-                const spans = mobileMenuBtn.querySelectorAll('span');
-                spans[0].style.transform = '';
-                spans[1].style.opacity = '';
-                spans[2].style.transform = '';
-            });
-        });
-    }
-}
-
-// Scroll-based Animations
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    const setOpen = (open) => {
+        links.classList.toggle('active', open);
+        btn.classList.toggle('active', open);
+        navbar.classList.toggle('menu-open', open);
+        btn.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
     };
 
+    btn.addEventListener('click', () => setOpen(!links.classList.contains('active')));
+    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+}
+
+// Navbar background once the page is scrolled
+function initNavbarScroll() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    const update = () => navbar.classList.toggle('scrolled', window.scrollY > 24);
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+}
+
+// Fade elements in as they enter the viewport
+function initReveal() {
+    const els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+        els.forEach(el => el.classList.add('in'));
+        return;
+    }
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                entry.target.classList.add('in');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(el => observer.observe(el));
+}
 
-    const animateElements = document.querySelectorAll(
-        '.service-card, .blog-card, .portfolio-card, .service-section, .contact-method, .about-card'
-    );
-
-    animateElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
-        observer.observe(el);
+// Duplicate marquee items so the loop is seamless
+function initMarquee() {
+    document.querySelectorAll('.marquee-track').forEach(track => {
+        track.innerHTML += track.innerHTML;
     });
 }
 
-// Add animate-in class styles
-const style = document.createElement('style');
-style.textContent = `.animate-in { opacity: 1 !important; transform: translateY(0) !important; }`;
-document.head.appendChild(style);
-
-// Navbar background on scroll
-function initNavbarScroll() {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                navbar.style.background = 'rgba(232, 231, 223, 0.96)';
-            } else {
-                navbar.style.background = 'rgba(232, 231, 223, 0.9)';
-            }
+// Amsterdam clock in the footer
+function initClock() {
+    const els = document.querySelectorAll('.tz-time');
+    if (!els.length) return;
+    const update = () => {
+        const time = new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Amsterdam',
+            hour: '2-digit', minute: '2-digit'
         });
-    }
-}
-
-// Timezone Widget
-function initTimezone() {
-    function updateTime() {
-        const options = { timeZone: 'Europe/Amsterdam' };
-        const now = new Date();
-        
-        const dateOptions = { ...options, month: 'short', day: 'numeric', year: 'numeric' };
-        const timeOptions = { ...options, hour: 'numeric', minute: '2-digit', hour12: true };
-        
-        const dateStr = now.toLocaleDateString('en-US', dateOptions);
-        const timeStr = now.toLocaleTimeString('en-US', timeOptions);
-        
-        const dateElements = document.querySelectorAll('[id^="timezone-date"]');
-        const timeElements = document.querySelectorAll('[id^="timezone-time"]');
-        
-        dateElements.forEach(el => el.textContent = dateStr);
-        timeElements.forEach(el => el.textContent = timeStr);
-    }
-    
-    updateTime();
-    setInterval(updateTime, 60000);
+        els.forEach(el => el.textContent = time);
+    };
+    update();
+    setInterval(update, 30000);
 }
 
 // Calendly Modal
 function initCalendlyModal() {
     const modal = document.getElementById('calendly-modal');
-    const openButtons = document.querySelectorAll('.open-calendly');
-    const closeButton = document.querySelector('.modal-close');
-    
     if (!modal) return;
-    
-    // Open modal
-    openButtons.forEach(btn => {
+
+    const open = () => {
+        modal.classList.add('active');
+        document.body.classList.add('modal-open');
+    };
+    const close = () => {
+        modal.classList.remove('active');
+        document.body.classList.remove('modal-open');
+    };
+
+    document.querySelectorAll('.open-calendly').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            modal.classList.add('active');
-            document.body.classList.add('modal-open');
+            open();
         });
     });
-    
-    // Close modal with button
-    if (closeButton) {
-        closeButton.addEventListener('click', () => {
-            modal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-        });
-    }
-    
-    // Close modal when clicking outside
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-        }
-    });
-    
-    // Close modal with Escape key
+    modal.querySelector('.modal-close')?.addEventListener('click', close);
+    modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            modal.classList.remove('active');
-            document.body.classList.remove('modal-open');
-        }
+        if (e.key === 'Escape' && modal.classList.contains('active')) close();
     });
 }
 
-// Portfolio Expand on Click
-function initPortfolioExpand() {
-    const readMoreButtons = document.querySelectorAll('.portfolio-read-more');
-    
-    readMoreButtons.forEach(button => {
-        const textWrapper = button.closest('.portfolio-text-wrapper');
-        if (!textWrapper) return;
-        
-        // Show full text on click
-        button.addEventListener('click', (e) => {
-            e.stopPropagation();
-            textWrapper.classList.add('expanded');
-        });
-    });
+// Show the thank-you message after FormSubmit redirects back
+function initContactSuccess() {
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('success-message');
+    if (!form || !success) return;
+    if (window.location.search.includes('success=true')) {
+        form.style.display = 'none';
+        success.style.display = 'block';
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
 }
 
 // Console easter egg
-console.log('%c👋 Hey there!\n%cInterested in working together?\nLet\'s chat: caesar.schoorl@gmail.com\n\n%c— Caesar Schoorl', 
+console.log('%c👋 Hey there!\n%cInterested in working together?\nLet\'s chat: caesar.schoorl@gmail.com\n\n%c— Caesar Schoorl',
 'font-size: 20px; font-weight: bold;',
 'font-size: 14px; color: #666;',
 'font-size: 12px; color: #999; font-style: italic;'
