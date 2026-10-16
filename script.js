@@ -1,41 +1,53 @@
 // Caesar Schoorl Portfolio Website - JavaScript
 
 document.addEventListener('DOMContentLoaded', () => {
-    initMobileMenu();
-    initNavbarScroll();
+    initMenu();
+    initFitText();
     initReveal();
-    initMarquee();
     initClock();
     initCalendlyModal();
     initContactSuccess();
 });
 
-// Mobile Menu Toggle
-function initMobileMenu() {
-    const btn = document.querySelector('.mobile-menu-btn');
-    const links = document.querySelector('.nav-links');
-    const navbar = document.querySelector('.navbar');
-    if (!btn || !links) return;
+// Full-screen menu
+function initMenu() {
+    const btn = document.querySelector('.menu-btn');
+    const menu = document.getElementById('menu');
+    if (!btn || !menu) return;
 
     const setOpen = (open) => {
-        links.classList.toggle('active', open);
-        btn.classList.toggle('active', open);
-        navbar.classList.toggle('menu-open', open);
+        menu.classList.toggle('open', open);
+        document.body.classList.toggle('menu-open', open);
+        btn.textContent = open ? 'Close' : 'Menu';
         btn.setAttribute('aria-expanded', open);
-        document.body.style.overflow = open ? 'hidden' : '';
     };
 
-    btn.addEventListener('click', () => setOpen(!links.classList.contains('active')));
-    links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setOpen(false)));
+    btn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('open')) setOpen(false);
+    });
 }
 
-// Navbar background once the page is scrolled
-function initNavbarScroll() {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    const update = () => navbar.classList.toggle('scrolled', window.scrollY > 24);
-    update();
-    window.addEventListener('scroll', update, { passive: true });
+// Scale giant words so they span the full width
+function initFitText() {
+    const els = document.querySelectorAll('.giant');
+    if (!els.length) return;
+
+    const fit = () => {
+        els.forEach(el => {
+            const style = getComputedStyle(el);
+            const available = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+            const span = el.querySelector('span') || el;
+            el.style.fontSize = '100px';
+            const width = span.getBoundingClientRect().width;
+            if (width > 0) el.style.fontSize = (100 * available / width * 0.995) + 'px';
+        });
+    };
+
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts) document.fonts.ready.then(fit);
 }
 
 // Fade elements in as they enter the viewport
@@ -52,18 +64,11 @@ function initReveal() {
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => observer.observe(el));
 }
 
-// Duplicate marquee items so the loop is seamless
-function initMarquee() {
-    document.querySelectorAll('.marquee-track').forEach(track => {
-        track.innerHTML += track.innerHTML;
-    });
-}
-
-// Amsterdam clock in the footer
+// Amsterdam clock
 function initClock() {
     const els = document.querySelectorAll('.tz-time');
     if (!els.length) return;

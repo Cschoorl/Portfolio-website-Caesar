@@ -5,218 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work — Caesar Schoorl</title>
     <meta name="description" content="Projects, hackathons and client work by Caesar Schoorl. Things I've built and done with AI.">
-    <meta name="theme-color" content="#0a0b0a">
+    <meta name="theme-color" content="#000000">
     <meta property="og:title" content="Work — Caesar Schoorl">
     <meta property="og:description" content="Projects, hackathons and client work by Caesar Schoorl. Things I've built and done with AI.">
     <meta property="og:image" content="/images/web/profile.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&family=Inter+Tight:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="navbar-inner">
-            <a href="/" class="logo" aria-label="Caesar Schoorl — home">
-                <span class="logo-mark" aria-hidden="true"></span>
-                Caesar Schoorl
-            </a>
-            <ul class="nav-links">
-                <li><a href="/portfolio" class="active">Work</a></li>
-                <li><a href="/whatido">Cool Stance</a></li>
-                <li><a href="/blog">Writing</a></li>
-                <li><a href="/contact" class="btn btn-light btn-sm">Let's talk</a></li>
-            </ul>
-            <button class="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
+    <a href="/" class="site-logo" aria-label="Caesar Schoorl — home"><span class="br">&lt;</span>caesar<span class="br">&gt;</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="menu" id="menu" aria-label="Main">
+        <div class="menu-links">
+            <a href="/">Home</a>
+            <a href="/portfolio" class="active">Work</a>
+            <a href="/whatido">Cool Stance</a>
+            <a href="/blog">Writing</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="menu-foot">
+            <span class="label">Amsterdam, Netherlands · <span class="tz-time">–</span></span>
+            <a href="#" class="btn open-calendly">Plan a call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
         </div>
     </nav>
 
     <main>
 
         <section class="page-hero">
-            <div class="aurora-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="wrap">
-                <span class="eyebrow">Work</span>
-                <h1 class="display">Things I've built <span class="serif glow">&amp; done.</span></h1>
-                <p class="lead">Projects, hackathons, client work and experiments. Most of them the kind of thing people said couldn't be done.</p>
-            </div>
+            <h1 class="giant"><span>Work</span></h1>
         </section>
 
-        <section class="section">
-            <div class="wrap">
-                <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Featured projects</span>
-                        <h2 class="h2">Big swings.</h2>
-                    </div>
-                    <p class="lead">Hackathons, missions and adventures. Each one started as an idea that sounded slightly too ambitious.</p>
+        <section class="intro gut">
+            <h2 class="headline reveal">Things I've built and done that people said couldn't be done</h2>
+            <dl class="meta reveal">
+                <div class="meta-row"><dt>What</dt><dd>Projects, hackathons and client work</dd></div>
+                <div class="meta-row"><dt>Status</dt><dd>Available for new projects</dd></div>
+            </dl>
+        </section>
+
+        <section class="section gut" style="padding-top:0">
+            <div class="section-top">
+                <h2>Featured projects</h2>
+                <div></div>
+            </div>
+            <div class="big-list">
+                <div class="big-item reveal">
+                    <h3>Megathon<sup>01</sup></h3>
+                    <p class="desc"><span class="label">Hackathon</span>Europe's biggest hackathon. Organized with Mollie, Peak, OpenAI, AIM and other partners. Hundreds of builders, one weekend.</p>
                 </div>
-                <div class="project-grid">
-                    <article class="project wide reveal">
-                        <div class="project-bg bg-aurora"></div>
-                        <div class="project-top"><span class="tag">Hackathon</span></div>
-                        <div>
-                            <h3>Megathon</h3>
-                            <p>Europe's biggest hackathon. Organized with Mollie, Peak, OpenAI, AIM and other partners. Hundreds of builders, one weekend.</p>
-                        </div>
-                    </article>
-                    <article class="project narrow reveal">
-                        <div class="project-bg bg-forest"></div>
-                        <div class="project-top"><span class="tag">Mission · Ongoing</span></div>
-                        <div>
-                            <div class="project-big">1.000</div>
-                            <h3>The Impossible Dream</h3>
-                            <p>Training 1.000 people at 1.000 companies in AI.</p>
-                        </div>
-                    </article>
-                    <article class="project third reveal">
-                        <div class="project-bg bg-sand"></div>
-                        <div class="project-top"><span class="tag">Hackathon</span></div>
-                        <div><h3>Hackathons × Mollie & Netlify</h3><p>Two ecosystems, one spirit: build something real, fast and meaningful.</p></div>
-                    </article>
-                    <article class="project third reveal">
-                        <div class="project-bg bg-sky"></div>
-                        <div class="project-top"><span class="tag">Education</span></div>
-                        <div><h3>NTU Singapore</h3><p>Mini-study in data science and machine learning at Nanyang Technological University.</p></div>
-                    </article>
-                    <article class="project third reveal">
-                        <div class="project-bg bg-ember"></div>
-                        <div class="project-top"><span class="tag">Coming soon</span></div>
-                        <div><h3>Camino — 120 km</h3><p>Walking the Camino de Santiago and building an AI app for mental health along the way.</p></div>
-                    </article>
+                <div class="big-item reveal">
+                    <h3>The Impossible Dream<sup>02</sup></h3>
+                    <p class="desc"><span class="label">Mission · Ongoing</span>Training 1.000 people at 1.000 companies in AI. Practical applications, data and workflows. A mission very much in progress.</p>
+                </div>
+                <div class="big-item reveal">
+                    <h3>Mollie × Netlify<sup>03</sup></h3>
+                    <p class="desc"><span class="label">Hackathons</span>Co-organized hackathons with Mollie and Netlify. Two ecosystems, one spirit: build something real, fast and meaningful.</p>
+                </div>
+                <div class="big-item reveal">
+                    <h3>NTU Singapore<sup>04</sup></h3>
+                    <p class="desc"><span class="label">Education</span>Mini-study at Nanyang Technological University in data science and machine learning.</p>
+                </div>
+                <div class="big-item reveal">
+                    <h3>Camino 120 km<sup>05</sup></h3>
+                    <p class="desc"><span class="label">Coming soon</span>Walking 120 km of the Camino de Santiago and building an AI app for mental health along the way.</p>
                 </div>
             </div>
         </section>
 
-        <section class="marquee" aria-label="Trained at">
-            <p class="marquee-label">Trained at</p>
-            <div class="marquee-track"><span>ING</span><span>Achmea</span><span>Rabobank</span><span>Miele</span><span>Hogeschool van Amsterdam</span><span>XXL Nutrition</span><span>INretail</span><span>Beeckestijn</span><span>OrangeFit</span><span>Tushby</span><span>FleuraMetz</span><span>Josh V</span><span>International Flexjobs</span><span>HAI Agency</span></div>
-        </section>
-
-        <section class="section">
-            <div class="wrap">
-                <div class="section-head">
-                    <div>
-                        <span class="eyebrow">Client work</span>
-                        <h2 class="h2">Selected clients.</h2>
-                    </div>
-                    <p class="lead">Part of the Impossible Dream: 1.000 people, 1.000 companies in AI. Currently in progress.</p>
-                </div>
-                <div class="case-grid">
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-hai.png" alt="HAI Agency logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">AI Consultancy</span><span class="chip">Strategy</span></div>
-                            <h3>HAI Agency</h3>
-                            <p>AI strategy and implementation for a creative agency: building smarter content workflows.</p>
-                        </div>
-                    </article>
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-miele.png" alt="Miele logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">Training</span><span class="chip">Workshop</span></div>
-                            <h3>Miele</h3>
-                            <p>AI training for teams at Miele: practical tools and workflows for a global brand.</p>
-                        </div>
-                    </article>
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-hva.png" alt="Hogeschool van Amsterdam logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">Education</span><span class="chip">AI Ethics</span></div>
-                            <h3>Hogeschool van Amsterdam</h3>
-                            <p>AI education and ethics modules for students and faculty at HvA.</p>
-                        </div>
-                    </article>
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-xxl.png" alt="XXL Nutrition logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">AI Automation</span><span class="chip">E-commerce</span></div>
-                            <h3>XXL Nutrition</h3>
-                            <p>AI-powered content and marketing automation for one of Europe's largest sports nutrition brands.</p>
-                        </div>
-                    </article>
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-inretail.png" alt="INretail logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">Training</span><span class="chip">Retail AI</span></div>
-                            <h3>INretail</h3>
-                            <p>AI training for retail professionals: practical applications for store operations and customer engagement.</p>
-                        </div>
-                    </article>
-                    <article class="case reveal">
-                        <div class="case-logo"><img src="images/web/logo-beeckestijn.png" alt="Beeckestijn Business School logo" loading="lazy"></div>
-                        <div class="case-body">
-                            <div class="case-tags"><span class="chip">Lecturing</span><span class="chip">Business School</span></div>
-                            <h3>Beeckestijn Business School</h3>
-                            <p>AI lecturer at Beeckestijn, teaching marketing professionals how AI reshapes their field.</p>
-                        </div>
-                    </article>
-                </div>
+        <section class="section gut">
+            <div class="section-top">
+                <h2>Client work</h2>
+                <div class="body-lg">Part of the Impossible Dream: 1.000 people, 1.000 companies in AI. Currently in progress.</div>
+            </div>
+            <div class="cases">
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-hai.png" alt="HAI Agency logo" loading="lazy"></div>
+                    <p class="label">AI Consultancy · Strategy</p>
+                    <h3>HAI Agency</h3>
+                    <p>AI strategy and implementation for a creative agency: building smarter content workflows.</p>
+                </article>
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-miele.png" alt="Miele logo" loading="lazy"></div>
+                    <p class="label">Training · Workshop</p>
+                    <h3>Miele</h3>
+                    <p>AI training for teams at Miele: practical tools and workflows for a global brand.</p>
+                </article>
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-hva.png" alt="Hogeschool van Amsterdam logo" loading="lazy"></div>
+                    <p class="label">Education · AI Ethics</p>
+                    <h3>Hogeschool van Amsterdam</h3>
+                    <p>AI education and ethics modules for students and faculty at HvA.</p>
+                </article>
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-xxl.png" alt="XXL Nutrition logo" loading="lazy"></div>
+                    <p class="label">AI Automation · E-commerce</p>
+                    <h3>XXL Nutrition</h3>
+                    <p>AI-powered content and marketing automation for one of Europe's largest sports nutrition brands.</p>
+                </article>
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-inretail.png" alt="INretail logo" loading="lazy"></div>
+                    <p class="label">Training · Retail AI</p>
+                    <h3>INretail</h3>
+                    <p>AI training for retail professionals: practical applications for store operations and customer engagement.</p>
+                </article>
+                <article class="case reveal">
+                    <div class="case-logo"><img src="images/web/logo-beeckestijn.png" alt="Beeckestijn Business School logo" loading="lazy"></div>
+                    <p class="label">Lecturing · Business School</p>
+                    <h3>Beeckestijn Business School</h3>
+                    <p>AI lecturer at Beeckestijn, teaching marketing professionals how AI reshapes their field.</p>
+                </article>
             </div>
         </section>
 
-        <section class="cta">
-            <div class="aurora-bg" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="wrap reveal">
-                <span class="eyebrow">Available for projects</span>
-                <h2 class="display">Let's build something <span class="serif glow">impossible.</span></h2>
-                <div class="hero-actions">
-                    <a href="#" class="btn btn-light open-calendly"><span class="dot"></span>Plan a coffee call</a>
-                    <a href="/contact" class="btn btn-ghost">Send a message <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
+        <section class="logos">
+            <p class="logos-label">Trained at:</p>
+            <div class="logo-grid reveal">
+                <span class="word">ING</span>
+                <span class="word">Achmea</span>
+                <span class="word">Rabobank</span>
+                <img src="images/web/logo-miele.png" alt="Miele" loading="lazy">
+                <img src="images/web/logo-hva.png" alt="Hogeschool van Amsterdam" loading="lazy">
+                <img src="images/web/logo-xxl.png" alt="XXL Nutrition" loading="lazy">
+                <img src="images/web/logo-inretail.png" alt="INretail" loading="lazy">
+                <img src="images/web/logo-beeckestijn.png" alt="Beeckestijn Business School" loading="lazy">
+                <img src="images/web/logo-hai.png" alt="HAI Agency" loading="lazy">
+                <span class="word">OrangeFit</span>
+                <span class="word">Tushby</span>
+                <span class="word">FleuraMetz</span>
+                <span class="word">Josh V</span>
+                <span class="word">International<br>Flexjobs</span>
+                <span class="word">+ many more</span>
+            </div>
+        </section>
+
+
+        <section class="cta gut reveal">
+            <h2 class="headline">Let's build something impossible.</h2>
+            <p class="body-lg" style="margin-bottom:2rem;color:var(--grey-2)">Available for new projects, workshops and talks.</p>
+            <div class="btn-row">
+                <a href="#" class="btn open-calendly">Plan a coffee call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+                <a href="/contact" class="btn btn-outline">Send a message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="wrap">
-            <div class="footer-top">
-                <div>
-                    <a href="/" class="logo"><span class="logo-mark" aria-hidden="true"></span>Caesar Schoorl</a>
-                    <p>AI consultant, trainer and builder from Amsterdam. Helping people and organizations do the impossible with AI.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Pages</h4>
-                    <ul>
-                        <li><a href="/portfolio">Work</a></li>
-                        <li><a href="/whatido">Cool Stance</a></li>
-                        <li><a href="/blog">Writing</a></li>
-                        <li><a href="/contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
-                        <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
-                        <li><a href="#" class="open-calendly">Calendly</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Based in</h4>
-                    <ul>
-                        <li class="muted">Amsterdam, NL</li>
-                        <li class="muted footer-tz"><span class="tz-dot"></span><span class="tz-time">–</span> local time</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-word" aria-hidden="true">Caesar Schoorl</div>
-            <div class="footer-bottom">
-                <span>© 2026 Caesar Schoorl</span>
-                <span>Doing the impossible with AI</span>
-            </div>
+        <div>
+            <span class="footer-brand">&lt;caesar schoorl&gt;</span>
+            <p style="color:var(--grey-2);margin-top:0.75rem;max-width:24rem">Doing the impossible with AI. AI consultant, trainer and builder from Amsterdam.</p>
+        </div>
+        <div>
+            <span class="label">Pages</span>
+            <ul>
+                <li><a href="/portfolio">Work</a></li>
+                <li><a href="/whatido">Cool Stance</a></li>
+                <li><a href="/blog">Writing</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <span class="label">Connect</span>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
+                <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
+                <li><a href="#" class="open-calendly">Calendly</a></li>
+            </ul>
+        </div>
+        <div>
+            <span class="label">Location</span>
+            <ul>
+                <li>Amsterdam, NL</li>
+                <li><span class="tz-time">–</span> local time</li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Caesar Schoorl</span>
+            <span>Doing the impossible with AI</span>
         </div>
     </footer>
 
     <!-- Calendly Modal -->
     <div class="modal-overlay" id="calendly-modal">
         <div class="modal-content">
-            <button class="modal-close" aria-label="Close">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
+            <button class="modal-close" aria-label="Close">Close</button>
             <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
         </div>
     </div>
