@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
+    initHeroName();
     initReveal();
     initClock();
     initCalendlyModal();
@@ -22,6 +23,23 @@ function initMenu() {
 
     btn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+}
+
+// Scale the hero name so it spans the full width
+function initHeroName() {
+    const el = document.querySelector('.hero-name');
+    if (!el) return;
+    const span = el.querySelector('span');
+    const fit = () => {
+        const style = getComputedStyle(el);
+        const available = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+        el.style.fontSize = '100px';
+        const width = span.getBoundingClientRect().width;
+        if (width > 0) el.style.fontSize = (100 * available / width * 0.99) + 'px';
+    };
+    fit();
+    window.addEventListener('resize', fit);
+    if (document.fonts) document.fonts.ready.then(fit);
 }
 
 // Fade elements in as they enter the viewport
