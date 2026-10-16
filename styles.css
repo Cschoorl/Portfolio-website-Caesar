@@ -12,6 +12,10 @@
     --line:  rgba(255, 255, 255, 0.16);
     --panel: #0f0f0f;
 
+    --r-lg: 24px;
+    --r:    16px;
+    --r-sm: 10px;
+
     --sans: 'Helvetica Neue', Helvetica, 'Inter Tight', Arial, sans-serif;
 
     --wrap: 1240px;
@@ -372,6 +376,52 @@ body.modal-open { overflow: hidden; }
     .reveal { opacity: 1; transform: none; }
 }
 
+/* ===== Rounded corners ===== */
+.btn, .menu-btn { border-radius: 999px; }
+.btn { padding: 0.75rem 1.25rem; }
+.nav .btn { padding: 0.5rem 1rem; }
+
+.hero {
+    margin: 0 0.75rem;
+    border-radius: var(--r-lg);
+    border-bottom: none;
+    height: calc(100svh - 64px - 0.75rem);
+}
+.hero-foot .btn-outline { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+
+.about-photo, .article img, .case-logo, .mission, .modal-content { border-radius: var(--r-lg); }
+.about-photo, .case-logo { overflow: hidden; }
+.modal-close { border-radius: 999px; top: 0.75rem; right: 0.75rem; }
+
+/* Services and projects as rounded cards */
+.item {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+}
+.item:hover { border-color: rgba(255, 255, 255, 0.35); }
+.cols { gap: 1rem; }
+
+/* Logo tiles instead of a shared grid */
+.logo-grid { border: none; gap: 0.5rem; }
+.logo-cell {
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    background: var(--panel);
+}
+
+/* Softer form fields */
+.field input, .field textarea {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--r-sm);
+    padding: 0.8rem 1rem;
+    font-size: 1.0625rem;
+}
+.field input:focus, .field textarea:focus { border-color: rgba(255, 255, 255, 0.6); }
+
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
     .cols { grid-template-columns: repeat(2, 1fr); }
@@ -397,7 +447,7 @@ body.modal-open { overflow: hidden; }
 
     .sec, .about-grid { grid-template-columns: 1fr; }
     .about-photo { aspect-ratio: 1; max-width: 420px; }
-    .hero { height: 78svh; }
+    .hero { height: 78svh; margin: 0 0.5rem; border-radius: var(--r); }
     .cols, .cols.two, .articles { grid-template-columns: 1fr; }
     .row { grid-template-columns: 1fr; gap: 0.25rem; }
     .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
