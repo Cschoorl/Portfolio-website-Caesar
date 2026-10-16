@@ -2,52 +2,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
-    initFitText();
     initReveal();
     initClock();
     initCalendlyModal();
     initContactSuccess();
 });
 
-// Full-screen menu
+// Mobile menu
 function initMenu() {
     const btn = document.querySelector('.menu-btn');
-    const menu = document.getElementById('menu');
-    if (!btn || !menu) return;
+    const nav = document.querySelector('.nav');
+    if (!btn || !nav) return;
 
     const setOpen = (open) => {
-        menu.classList.toggle('open', open);
-        document.body.classList.toggle('menu-open', open);
+        nav.classList.toggle('open', open);
         btn.textContent = open ? 'Close' : 'Menu';
         btn.setAttribute('aria-expanded', open);
     };
 
-    btn.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && menu.classList.contains('open')) setOpen(false);
-    });
-}
-
-// Scale giant words so they span the full width
-function initFitText() {
-    const els = document.querySelectorAll('.giant');
-    if (!els.length) return;
-
-    const fit = () => {
-        els.forEach(el => {
-            const style = getComputedStyle(el);
-            const available = el.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
-            const span = el.querySelector('span') || el;
-            el.style.fontSize = '100px';
-            const width = span.getBoundingClientRect().width;
-            if (width > 0) el.style.fontSize = (100 * available / width * 0.995) + 'px';
-        });
-    };
-
-    fit();
-    window.addEventListener('resize', fit);
-    if (document.fonts) document.fonts.ready.then(fit);
+    btn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
 }
 
 // Fade elements in as they enter the viewport

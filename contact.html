@@ -11,114 +11,130 @@
     <meta property="og:image" content="/images/web/profile.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&family=Inter+Tight:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <a href="/" class="site-logo" aria-label="Caesar Schoorl — home"><span class="br">&lt;</span>caesar<span class="br">&gt;</span></a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
-    <nav class="menu" id="menu" aria-label="Main">
-        <div class="menu-links">
-            <a href="/">Home</a>
-            <a href="/portfolio">Work</a>
-            <a href="/whatido">Cool Stance</a>
-            <a href="/blog">Writing</a>
-            <a href="/contact" class="active">Contact</a>
+    <header class="header">
+        <div class="wrap header-inner">
+            <a href="/" class="brand">Caesar Schoorl</a>
+            <nav class="nav" aria-label="Main">
+                <a href="/whatido">Services</a>
+                <a href="/portfolio">Work</a>
+                <a href="/blog">Writing</a>
+                <a href="/contact" class="btn active">Contact</a>
+            </nav>
+            <button class="menu-btn" aria-expanded="false">Menu</button>
         </div>
-        <div class="menu-foot">
-            <span class="label">Amsterdam, Netherlands · <span class="tz-time">–</span></span>
-            <a href="#" class="btn open-calendly">Plan a call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        </div>
-    </nav>
+    </header>
 
     <main>
 
-        <section class="page-hero">
-            <h1 class="giant"><span>Contact</span></h1>
+        <section class="page-head">
+            <div class="wrap">
+                <span class="label">Contact</span>
+                <h1>Let's talk.</h1>
+                <p class="lead">Have a question, project or idea? I'd love to hear from you. Plan a call or send a message.</p>
+            </div>
         </section>
 
-        <section class="intro gut">
-            <h2 class="headline reveal">Have a question, project or idea? Let's talk</h2>
-            <dl class="meta reveal">
-                <div class="meta-row"><dt>LinkedIn</dt><dd><a class="inline-link" href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">caesar-schoorl-ai</a></dd></div>
-                <div class="meta-row"><dt>Substack</dt><dd><a class="inline-link" href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">@caesarschoorl</a></dd></div>
-                <div class="meta-row"><dt>Location</dt><dd>Amsterdam, Netherlands</dd></div>
-            </dl>
-            <a href="#" class="btn open-calendly reveal">Plan a coffee call <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <div class="wrap">
+
+        <section class="sec">
+            <div class="sec-label">
+                <h2>Reach out</h2>
+                <span class="label">Direct contact</span>
+            </div>
+            <div class="sec-body">
+                <dl class="meta reveal" style="margin-top:0">
+                    <div class="meta-row"><dt>Call</dt><dd><a href="#" class="text-link open-calendly">Plan a coffee call</a></dd></div>
+                    <div class="meta-row"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener" class="text-link">caesar-schoorl-ai</a></dd></div>
+                    <div class="meta-row"><dt>Substack</dt><dd><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener" class="text-link">@caesarschoorl</a></dd></div>
+                    <div class="meta-row"><dt>Location</dt><dd>Amsterdam, Netherlands</dd></div>
+                </dl>
+            </div>
         </section>
 
-        <section class="section gut" style="padding-top:0">
-            <div class="section-top">
-                <h2>Send a message</h2>
-                <div class="body-lg">I'll get back to you as soon as possible.</div>
-            </div>
-            <div id="success-message" class="form-success">
-                <h2 class="headline-md">Thank you!</h2>
-                <p class="body-lg" style="margin-top:1rem;color:var(--grey-2)">Your message is sent. I'll get back to you as soon as possible.</p>
-            </div>
 
-            <form class="form reveal" id="contact-form" action="https://formsubmit.co/caesar.schoorl@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New message via your website!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://caesarschoorl.nl/contact?success=true">
-                <input type="text" name="_honey" style="display:none">
-
-                <div class="form-row">
-                    <div class="field">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your name" required>
+        <section class="sec">
+            <div class="sec-label">
+                <h2>Message</h2>
+                <span class="label">I'll reply as soon as possible</span>
+            </div>
+            <div class="sec-body">
+                <div id="success-message" class="form-success">
+                    <p class="h2">Thank you!</p>
+                    <p class="lead" style="margin-top:0.75rem">Your message is sent. I'll get back to you as soon as possible.</p>
+                </div>
+                <form class="form reveal" id="contact-form" action="https://formsubmit.co/caesar.schoorl@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New message via your website!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://caesarschoorl.nl/contact?success=true">
+                    <input type="text" name="_honey" style="display:none">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
                     </div>
                     <div class="field">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        <label for="company">Company (optional)</label>
+                        <input type="text" id="company" name="company" placeholder="Your company">
                     </div>
-                </div>
-                <div class="field">
-                    <label for="company">Company (optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Your company">
-                </div>
-                <div class="field">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Tell me about your project or question" required></textarea>
-                </div>
-                <div><button type="submit" class="btn">Send message <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></button></div>
-            </form>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell me about your project or question" required></textarea>
+                    </div>
+                    <div><button type="submit" class="btn">Send message <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+                </form>
+            </div>
         </section>
+
+        </div>
     </main>
 
     <footer class="footer">
-        <div>
-            <span class="footer-brand">&lt;caesar schoorl&gt;</span>
-            <p style="color:var(--grey-2);margin-top:0.75rem;max-width:24rem">Doing the impossible with AI. AI consultant, trainer and builder from Amsterdam.</p>
-        </div>
-        <div>
-            <span class="label">Pages</span>
-            <ul>
-                <li><a href="/portfolio">Work</a></li>
-                <li><a href="/whatido">Cool Stance</a></li>
-                <li><a href="/blog">Writing</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </div>
-        <div>
-            <span class="label">Connect</span>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
-                <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
-                <li><a href="#" class="open-calendly">Calendly</a></li>
-            </ul>
-        </div>
-        <div>
-            <span class="label">Location</span>
-            <ul>
-                <li>Amsterdam, NL</li>
-                <li><span class="tz-time">–</span> local time</li>
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 Caesar Schoorl</span>
-            <span>Doing the impossible with AI</span>
+        <div class="wrap">
+            <div class="footer-grid">
+                <div>
+                    <p class="brand">Caesar Schoorl</p>
+                    <p class="muted" style="margin-top:0.5rem;max-width:22rem">AI consultant and trainer from Amsterdam. Doing the impossible with AI.</p>
+                </div>
+                <div>
+                    <span class="label">Pages</span>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/whatido">Services</a></li>
+                        <li><a href="/portfolio">Work</a></li>
+                        <li><a href="/blog">Writing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="label">Connect</span>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
+                        <li><a href="#" class="open-calendly">Plan a call</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="label">Location</span>
+                    <ul>
+                        <li>Amsterdam, NL</li>
+                        <li class="muted"><span class="tz-time">–</span> local time</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Caesar Schoorl</span>
+                <span>Doing the impossible with AI</span>
+            </div>
         </div>
     </footer>
 
