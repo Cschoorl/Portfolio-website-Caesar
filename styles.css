@@ -232,15 +232,18 @@ h3, .h3 {
 .meta-row dd { font-size: 1.0625rem; }
 
 /* ===== Columns of items (services, projects) ===== */
-.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem 2rem; }
-.cols.two { grid-template-columns: repeat(2, 1fr); }
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem 2rem; }
+.cols.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.item { display: flex; flex-direction: column; align-items: flex-start; }
+.item .btn { margin-top: auto; padding: 0.6rem 1rem; font-size: 0.9375rem; gap: 0.6rem; }
 .item { border-top: 1px solid var(--line); padding-top: 1.25rem; }
 .item .label { margin-bottom: 0.75rem; }
 .item h3 { margin-bottom: 0.6rem; }
 .item p { color: var(--grey-2); font-size: 1rem; }
 .item ul { margin-top: 1rem; display: grid; gap: 0.3rem; font-size: 0.9375rem; color: var(--grey-2); }
 .item li::before { content: '—'; color: var(--grey); margin-right: 0.5rem; }
-.item .btn, .item .text-link { margin-top: 1.5rem; }
+.item ul { margin-bottom: 1.5rem; }
+.item .text-link { margin-top: 1.5rem; }
 
 /* ===== Rows (experience) ===== */
 .rows { border-top: 1px solid var(--line); }
@@ -444,7 +447,7 @@ body.modal-open { overflow: hidden; }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
-    .cols { grid-template-columns: repeat(2, 1fr); }
+    .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .logo-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .articles { grid-template-columns: repeat(2, 1fr); }
 }

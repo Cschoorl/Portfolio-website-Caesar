@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
+    initSmoothScroll();
     initHeroName();
     initReveal();
     initClock();
@@ -23,6 +24,48 @@ function initMenu() {
 
     btn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
     nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+}
+
+// Slower, eased scrolling for mouse wheels and trackpads.
+// Touch devices and visitors who prefer reduced motion keep native scrolling.
+function initSmoothScroll() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const EASE = 0.075;   // lower = slower, longer glide
+    let target = window.scrollY;
+    let current = window.scrollY;
+    let running = false;
+
+    const maxScroll = () => document.documentElement.scrollHeight - window.innerHeight;
+    const locked = () => document.body.classList.contains('modal-open') || document.body.classList.contains('menu-open');
+
+    const tick = () => {
+        current += (target - current) * EASE;
+        if (Math.abs(target - current) < 0.5) {
+            current = target;
+            running = false;
+        }
+        window.scrollTo({ top: current, behavior: 'instant' });
+        if (running) requestAnimationFrame(tick);
+    };
+
+    window.addEventListener('wheel', (e) => {
+        if (e.ctrlKey || locked() || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        e.preventDefault();
+
+        let delta = e.deltaY;
+        if (e.deltaMode === 1) delta *= 40;                      // lines
+        else if (e.deltaMode === 2) delta *= window.innerHeight; // pages
+
+        if (!running) target = current = window.scrollY;         // resync after keyboard/scrollbar use
+        target = Math.max(0, Math.min(maxScroll(), target + delta));
+
+        if (!running) {
+            running = true;
+            requestAnimationFrame(tick);
+        }
+    }, { passive: false });
 }
 
 // Scale the hero name so it spans the full width
