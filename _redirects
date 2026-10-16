@@ -10,9 +10,13 @@
 /blog.html /blog 301
 /contact.html /contact 301
 
-
-
-
-
-
-
+# English version
+/en /en/index.html 200
+/en/whatido /en/whatido.html 200
+/en/portfolio /en/portfolio.html 200
+/en/blog /en/blog.html 200
+/en/contact /en/contact.html 200
+/en/whatido.html /en/whatido 301
+/en/portfolio.html /en/portfolio 301
+/en/blog.html /en/blog 301
+/en/contact.html /en/contact 301

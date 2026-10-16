@@ -17,7 +17,7 @@ function initMenu() {
 
     const setOpen = (open) => {
         nav.classList.toggle('open', open);
-        btn.textContent = open ? 'Close' : 'Menu';
+        btn.textContent = open ? (btn.dataset.close || 'Close') : (btn.dataset.open || 'Menu');
         btn.setAttribute('aria-expanded', open);
     };
 

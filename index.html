@@ -1,47 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caesar Schoorl — Doing the impossible with AI</title>
-    <meta name="description" content="AI consultant and trainer from Amsterdam. Workshops, automations and AI strategy.">
+    <title>Caesar Schoorl — Het onmogelijke doen met AI</title>
+    <meta name="description" content="AI-consultant en trainer uit Amsterdam. Workshops, automatiseringen en AI-strategie.">
     <meta name="theme-color" content="#000000">
-    <meta property="og:title" content="Caesar Schoorl — Doing the impossible with AI">
-    <meta property="og:description" content="AI consultant and trainer from Amsterdam. Workshops, automations and AI strategy.">
+    <meta property="og:title" content="Caesar Schoorl — Het onmogelijke doen met AI">
+    <meta property="og:description" content="AI-consultant en trainer uit Amsterdam. Workshops, automatiseringen en AI-strategie.">
     <meta property="og:image" content="/images/web/profile.jpg">
+    <link rel="alternate" hreflang="nl" href="https://caesarschoorl.nl/">
+    <link rel="alternate" hreflang="en" href="https://caesarschoorl.nl/en">
+    <link rel="alternate" hreflang="x-default" href="https://caesarschoorl.nl/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
     <header class="header">
         <div class="wrap header-inner">
             <a href="/" class="brand">Caesar Schoorl</a>
-            <nav class="nav" aria-label="Main">
-                <a href="/whatido">Services</a>
-                <a href="/portfolio">Work</a>
-                <a href="/blog">Writing</a>
+            <nav class="nav" aria-label="Hoofdmenu">
+                <a href="/whatido">Diensten</a>
+                <a href="/portfolio">Werk</a>
+                <a href="/blog">Artikelen</a>
                 <a href="/contact" class="btn">Contact</a>
             </nav>
-            <button class="menu-btn" aria-expanded="false">Menu</button>
+            <div class="header-end">
+                <div class="lang-switch" role="group" aria-label="Taal">
+                    <a href="/" hreflang="nl" lang="nl" class="on">NL</a>
+                    <a href="/en" hreflang="en" lang="en">EN</a>
+                </div>
+                <button class="menu-btn" aria-expanded="false" data-open="Menu" data-close="Sluiten">Menu</button>
+            </div>
         </div>
     </header>
 
     <main>
 
         <section class="hero">
-            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/web/hero-poster.jpg" aria-hidden="true">
-                <source src="videos/hero.webm" type="video/webm">
-                <source src="videos/hero.mp4" type="video/mp4">
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/images/web/hero-poster.jpg" aria-hidden="true">
+                <source src="/videos/hero.webm" type="video/webm">
+                <source src="/videos/hero.mp4" type="video/mp4">
             </video>
             <h1 class="hero-name"><span>Caesar Schoorl</span></h1>
             <div class="wrap hero-foot">
-                <p class="lead">AI consultant &amp; trainer from Amsterdam. Doing the impossible with AI.</p>
+                <p class="lead">AI-consultant &amp; trainer uit Amsterdam. Het onmogelijke doen met AI.</p>
                 <div class="btn-row">
-                    <a href="#" class="btn open-calendly">Plan a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                    <a href="/portfolio" class="btn btn-outline" style="background:rgba(0,0,0,0.35)">View my work</a>
+                    <a href="/contact" class="btn">Neem contact op <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    <a href="/portfolio" class="btn btn-outline" style="background:rgba(0,0,0,0.35)">Bekijk mijn werk</a>
                 </div>
             </div>
         </section>
@@ -50,21 +59,21 @@
 
         <section class="sec">
             <div class="sec-label">
-                <h2>About</h2>
-                <span class="label">Who I am</span>
+                <h2>Over mij</h2>
+                <span class="label">Wie ik ben</span>
             </div>
             <div class="sec-body">
                 <div class="about-grid">
                     <div>
-                        <p class="h2 reveal">AI is not the future. It's a tool. And everyone deserves to know how to use it.</p>
-                        <p class="lead reveal" style="margin-top:1.25rem">I'm Caesar Schoorl, founder of WAISE, partner at Lerai and AI docent at Beeckestijn Business School. I help teams and organizations use AI in a practical and responsible way.</p>
+                        <p class="h2 reveal">AI is niet de toekomst. Het is gereedschap. En iedereen verdient het om te weten hoe je het gebruikt.</p>
+                        <p class="lead reveal" style="margin-top:1.25rem">Ik ben Caesar Schoorl, oprichter van WAISE, partner bij Lerai en AI-docent aan Beeckestijn Business School. Ik help teams en organisaties AI praktisch en verantwoord in te zetten.</p>
                         <dl class="meta reveal">
-                            <div class="meta-row"><dt>Based in</dt><dd>Amsterdam, Netherlands</dd></div>
-                            <div class="meta-row"><dt>Roles</dt><dd>Founder · Builder · Thinker · Speaker</dd></div>
-                            <div class="meta-row"><dt>Mission</dt><dd>The Impossible Dream: 1.000 people at 1.000 companies</dd></div>
+                            <div class="meta-row"><dt>Gevestigd in</dt><dd>Amsterdam, Nederland</dd></div>
+                            <div class="meta-row"><dt>Rollen</dt><dd>Oprichter · Bouwer · Denker · Spreker</dd></div>
+                            <div class="meta-row"><dt>Missie</dt><dd>The Impossible Dream: 1.000 mensen bij 1.000 bedrijven</dd></div>
                         </dl>
                     </div>
-                    <div class="about-photo reveal"><img src="images/web/profile.jpg" alt="Caesar Schoorl" loading="lazy"></div>
+                    <div class="about-photo reveal"><img src="/images/web/profile.jpg" alt="Caesar Schoorl" loading="lazy"></div>
                 </div>
             </div>
         </section>
@@ -72,67 +81,67 @@
 
         <section class="sec">
             <div class="sec-label">
-                <h2>Services</h2>
-                <span class="label">What I do</span>
+                <h2>Diensten</h2>
+                <span class="label">Wat ik doe</span>
             </div>
             <div class="sec-body">
                 <div class="cols">
                     <div class="item reveal">
                         <span class="label">01 · Training</span>
                         <h3>AI Workshops</h3>
-                        <p>Practical, hands-on training. Tailor made for your team. No slides without substance.</p>
+                        <p>Praktische, hands-on trainingen. Op maat voor jouw team. Geen slides zonder inhoud.</p>
                     </div>
                     <div class="item reveal">
-                        <span class="label">02 · Efficiency</span>
-                        <h3>AI Automations</h3>
-                        <p>Automations that take over repetitive work, cut errors and speed up processes, from marketing and sales to HR and support.</p>
+                        <span class="label">02 · Efficiëntie</span>
+                        <h3>AI-automatiseringen</h3>
+                        <p>Automatiseringen die repetitief werk overnemen, fouten verminderen en processen versnellen, van marketing en sales tot HR en support.</p>
                     </div>
                     <div class="item reveal">
-                        <span class="label">03 · Strategy</span>
-                        <h3>AI Consultancy</h3>
-                        <p>Finding where AI makes the biggest impact, building custom solutions and training teams to adopt them with confidence.</p>
+                        <span class="label">03 · Strategie</span>
+                        <h3>AI-advies</h3>
+                        <p>Uitzoeken waar AI de meeste impact maakt, oplossingen op maat bouwen en teams trainen zodat ze die met vertrouwen gebruiken.</p>
                     </div>
-                </div><div class="sec-foot"><a href="/whatido" class="text-link">All services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                </div><div class="sec-foot"><a href="/whatido" class="text-link">Alle diensten <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </div>
         </section>
 
 
         <section class="sec">
             <div class="sec-label">
-                <h2>Work</h2>
-                <span class="label">Selected projects</span>
+                <h2>Werk</h2>
+                <span class="label">Uitgelichte projecten</span>
             </div>
             <div class="sec-body">
                 <div class="cols two">
                     <div class="item reveal">
                         <span class="label">Hackathon</span>
                         <h3>Megathon</h3>
-                        <p>Europe's biggest hackathon, organized with Mollie, Peak, OpenAI, AIM and other partners. Hundreds of builders, one weekend.</p>
+                        <p>De grootste hackathon van Europa, georganiseerd met Mollie, Peak, OpenAI, AIM en andere partners. Honderden bouwers, één weekend.</p>
                     </div>
                     <div class="item reveal">
-                        <span class="label">Mission · Ongoing</span>
+                        <span class="label">Missie · Lopend</span>
                         <h3>The Impossible Dream</h3>
-                        <p>Training 1.000 people at 1.000 companies in AI. Practical applications, data and workflows.</p>
+                        <p>1.000 mensen bij 1.000 bedrijven trainen in AI. Praktische toepassingen, data en workflows.</p>
                     </div>
                     <div class="item reveal">
                         <span class="label">Hackathons</span>
                         <h3>Mollie × Netlify</h3>
-                        <p>Co-organized hackathons with Mollie and Netlify. Build something real, fast and meaningful.</p>
+                        <p>Hackathons georganiseerd met Mollie en Netlify. Iets echts bouwen, snel en betekenisvol.</p>
                     </div>
                     <div class="item reveal">
-                        <span class="label">Education</span>
+                        <span class="label">Onderwijs</span>
                         <h3>NTU Singapore</h3>
-                        <p>Mini-study at Nanyang Technological University in data science and machine learning.</p>
+                        <p>Mini-studie aan de Nanyang Technological University in data science en machine learning.</p>
                     </div>
-                </div><div class="sec-foot"><a href="/portfolio" class="text-link">All work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                </div><div class="sec-foot"><a href="/portfolio" class="text-link">Al mijn werk <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </div>
         </section>
 
 
         <section class="sec">
             <div class="sec-label">
-                <h2>Clients</h2>
-                <span class="label">Teams I have trained</span>
+                <h2>Klanten</h2>
+                <span class="label">Teams die ik heb getraind</span>
             </div>
             <div class="sec-body">
                 <div class="logo-grid reveal">
@@ -143,19 +152,19 @@
                     <div class="logo-cell">KPN</div>
                     <div class="logo-cell">Vodafone</div>
                     <div class="logo-cell">Ziggo</div>
-                    <div class="logo-cell"><img src="images/web/logo-miele.png" alt="Miele" loading="lazy"></div>
-                    <div class="logo-cell"><img src="images/web/logo-hva.png" alt="Hogeschool van Amsterdam" loading="lazy"></div>
-                    <div class="logo-cell"><img src="images/web/logo-xxl.png" alt="XXL Nutrition" loading="lazy"></div>
-                    <div class="logo-cell"><img src="images/web/logo-inretail.png" alt="INretail" loading="lazy"></div>
-                    <div class="logo-cell"><img src="images/web/logo-beeckestijn.png" alt="Beeckestijn Business School" loading="lazy"></div>
-                    <div class="logo-cell"><img src="images/web/logo-hai.png" alt="HAI Agency" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-miele.png" alt="Miele" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-hva.png" alt="Hogeschool van Amsterdam" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-xxl.png" alt="XXL Nutrition" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-inretail.png" alt="INretail" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-beeckestijn.png" alt="Beeckestijn Business School" loading="lazy"></div>
+                    <div class="logo-cell"><img src="/images/web/logo-hai.png" alt="HAI Agency" loading="lazy"></div>
                     <div class="logo-cell">We Enable Climbers</div>
                     <div class="logo-cell">Josh V</div>
                     <div class="logo-cell">OrangeFit</div>
                     <div class="logo-cell">Tushby</div>
                     <div class="logo-cell">FleuraMetz</div>
                     <div class="logo-cell">International Flexjobs</div>
-                    <div class="logo-cell">+ many more</div>
+                    <div class="logo-cell">+ nog veel meer</div>
                 </div>
             </div>
         </section>
@@ -163,35 +172,35 @@
 
         <section class="sec">
             <div class="sec-label">
-                <h2>Experience</h2>
-                <span class="label">Where I work</span>
+                <h2>Ervaring</h2>
+                <span class="label">Waar ik werk</span>
             </div>
             <div class="sec-body">
                 <div class="rows">
                     <div class="row reveal">
-                        <span class="when">2022 — Today</span>
-                        <p class="what">Owner & AI Consultant<span>WAISE · Amsterdam</span></p>
-                        <p class="note">AI consultancy and training bureau, from strategy to implementation.</p>
+                        <span class="when">2022 — Nu</span>
+                        <p class="what">Eigenaar & AI-consultant<span>WAISE · Amsterdam</span></p>
+                        <p class="note">AI-advies- en trainingsbureau, van strategie tot implementatie.</p>
                     </div>
                     <div class="row reveal">
-                        <span class="when">2023 — Today</span>
+                        <span class="when">2023 — Nu</span>
                         <p class="what">Partner<span>Lerai · Amsterdam</span></p>
-                        <p class="note">Connecting learning and AI: frameworks that make knowledge accessible.</p>
+                        <p class="note">Leren en AI verbinden: frameworks die kennis toegankelijk maken.</p>
                     </div>
                     <div class="row reveal">
-                        <span class="when">2024 — Today</span>
-                        <p class="what">AI Docent (Lecturer)<span>Beeckestijn Business School · Amsterdam</span></p>
-                        <p class="note">Teaching professionals how to apply AI within their organizations.</p>
+                        <span class="when">2024 — Nu</span>
+                        <p class="what">AI-docent<span>Beeckestijn Business School · Amsterdam</span></p>
+                        <p class="note">Professionals leren hoe ze AI toepassen binnen hun organisatie.</p>
                     </div>
                     <div class="row reveal">
-                        <span class="when">2024 — Today</span>
-                        <p class="what">AI Trainer<span>Josh V · Amsterdam</span></p>
-                        <p class="note">Workshops that help teams use AI tools in their daily work.</p>
+                        <span class="when">2024 — Nu</span>
+                        <p class="what">AI-trainer<span>Josh V · Amsterdam</span></p>
+                        <p class="note">Workshops die teams helpen AI-tools in hun dagelijkse werk te gebruiken.</p>
                     </div>
                     <div class="row reveal">
-                        <span class="when">2024 — Today</span>
-                        <p class="what">AI Trainer<span>International Flexjobs · Remote</span></p>
-                        <p class="note">AI fundamentals and practical tools for the flexible workforce.</p>
+                        <span class="when">2024 — Nu</span>
+                        <p class="what">AI-trainer<span>International Flexjobs · Remote</span></p>
+                        <p class="note">De basis van AI en praktische tools voor flexwerkers.</p>
                     </div>
                 </div>
             </div>
@@ -200,30 +209,30 @@
 
         <section class="sec">
             <div class="sec-label">
-                <h2>Writing</h2>
-                <span class="label">Latest articles</span>
+                <h2>Artikelen</h2>
+                <span class="label">Laatste artikelen</span>
             </div>
             <div class="sec-body">
                 <div class="articles">
                     <a href="https://caesarschoorl.substack.com/p/the-nature-of-intelligence" target="_blank" rel="noopener" class="article reveal">
-                        <img src="images/web/nature-of-intelligence.jpg" alt="" loading="lazy">
-                        <span class="label">Substack · Dec 14, 2025</span>
+                        <img src="/images/web/nature-of-intelligence.jpg" alt="" loading="lazy">
+                        <span class="label">Substack · 14 dec 2025</span>
                         <h3>The Nature of Intelligence</h3>
-                        <p>Is artificial intelligence really intelligent, or do we misunderstand intelligence itself?</p>
+                        <p>Is kunstmatige intelligentie echt intelligent, of begrijpen we intelligentie zelf verkeerd?</p>
                     </a>
                     <a href="https://substack.com/home/post/p-180022328" target="_blank" rel="noopener" class="article reveal">
-                        <img src="images/web/learning.jpg" alt="" loading="lazy">
-                        <span class="label">Substack · Nov 26, 2025</span>
+                        <img src="/images/web/learning.jpg" alt="" loading="lazy">
+                        <span class="label">Substack · 26 nov 2025</span>
                         <h3>We've forgotten how learning works.</h3>
-                        <p>In a world full of AI tools and instant answers, we've lost sight of the importance of deep learning.</p>
+                        <p>In een wereld vol AI-tools en directe antwoorden zijn we vergeten hoe belangrijk diep leren is.</p>
                     </a>
                     <a href="https://www.frankwatching.com/archive/2025/11/13/de-drie-ai-fases-orkest/" target="_blank" rel="noopener" class="article reveal">
-                        <img src="images/web/frankwatching.jpg" alt="" loading="lazy">
-                        <span class="label">Frankwatching · Nov 13, 2025</span>
+                        <img src="/images/web/frankwatching.jpg" alt="" loading="lazy">
+                        <span class="label">Frankwatching · 13 nov 2025</span>
                         <h3>De 3 AI-fases: van dirigent naar zelfspelend orkest</h3>
                         <p>AI bevindt zich op een kantelpunt: van uitvoerend gereedschap naar zelfdenkend systeem.</p>
                     </a>
-                </div><div class="sec-foot"><a href="/blog" class="text-link">All articles <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+                </div><div class="sec-foot"><a href="/blog" class="text-link">Alle artikelen <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
             </div>
         </section>
 
@@ -231,11 +240,11 @@
 
     <section class="cta" style="border-top:1px solid var(--line)">
         <div class="wrap reveal">
-            <h2>Let's work together.</h2>
-            <p class="lead">Available for new projects, workshops and talks. The easiest way to start is a short call.</p>
+            <h2>Laten we samenwerken.</h2>
+            <p class="lead">Beschikbaar voor nieuwe projecten, workshops en lezingen. De makkelijkste start is een kort gesprek.</p>
             <div class="btn-row">
-                <a href="#" class="btn open-calendly">Plan a call <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <a href="/contact" class="btn btn-outline">Send a message</a>
+                <a href="#" class="btn open-calendly">Plan een gesprek <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a href="/contact" class="btn btn-outline">Stuur een bericht</a>
             </div>
         </div>
     </section>
@@ -246,37 +255,37 @@
             <div class="footer-grid">
                 <div>
                     <p class="brand">Caesar Schoorl</p>
-                    <p class="muted" style="margin-top:0.5rem;max-width:22rem">AI consultant and trainer from Amsterdam. Doing the impossible with AI.</p>
+                    <p class="muted" style="margin-top:0.5rem;max-width:22rem">AI-consultant en trainer uit Amsterdam. Het onmogelijke doen met AI.</p>
                 </div>
                 <div>
-                    <span class="label">Pages</span>
+                    <span class="label">Pagina's</span>
                     <ul>
                         <li><a href="/">Home</a></li>
-                        <li><a href="/whatido">Services</a></li>
-                        <li><a href="/portfolio">Work</a></li>
-                        <li><a href="/blog">Writing</a></li>
+                        <li><a href="/whatido">Diensten</a></li>
+                        <li><a href="/portfolio">Werk</a></li>
+                        <li><a href="/blog">Artikelen</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <span class="label">Connect</span>
+                    <span class="label">Volg mij</span>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/caesar-schoorl-ai" target="_blank" rel="noopener">LinkedIn</a></li>
                         <li><a href="https://substack.com/@caesarschoorl" target="_blank" rel="noopener">Substack</a></li>
-                        <li><a href="#" class="open-calendly">Plan a call</a></li>
+                        <li><a href="#" class="open-calendly">Plan een gesprek</a></li>
                     </ul>
                 </div>
                 <div>
-                    <span class="label">Location</span>
+                    <span class="label">Locatie</span>
                     <ul>
                         <li>Amsterdam, NL</li>
-                        <li class="muted"><span class="tz-time">–</span> local time</li>
+                        <li class="muted"><span class="tz-time">–</span> lokale tijd</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <span>© 2026 Caesar Schoorl</span>
-                <span>Doing the impossible with AI</span>
+                <span>Het onmogelijke doen met AI</span>
             </div>
         </div>
     </footer>
@@ -284,11 +293,11 @@
     <!-- Calendly Modal -->
     <div class="modal-overlay" id="calendly-modal">
         <div class="modal-content">
-            <button class="modal-close" aria-label="Close">Close</button>
+            <button class="modal-close" aria-label="Sluiten">Sluiten</button>
             <div class="calendly-inline-widget" data-url="https://calendly.com/caesar-schoorl/online-koffietje-met-caesar" style="min-width:320px;height:700px;"></div>
         </div>
     </div>
     <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
