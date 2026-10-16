@@ -32,9 +32,10 @@
     <main>
 
         <section class="hero">
-            <div class="hero-video" aria-hidden="true">
-                <iframe src="https://www.youtube-nocookie.com/embed/GJnGDvHR22A?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=GJnGDvHR22A&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;disablekb=1&amp;iv_load_policy=3" title="Background video" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture" frameborder="0"></iframe>
-            </div>
+            <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/web/hero-poster.jpg" aria-hidden="true">
+                <source src="videos/hero.webm" type="video/webm">
+                <source src="videos/hero.mp4" type="video/mp4">
+            </video>
             <h1 class="hero-name"><span>Caesar Schoorl</span></h1>
             <div class="wrap hero-foot">
                 <p class="lead">AI consultant &amp; trainer from Amsterdam. Doing the impossible with AI.</p>
