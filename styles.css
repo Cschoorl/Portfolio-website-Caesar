@@ -383,10 +383,11 @@ body.modal-open { overflow: hidden; }
 .nav .btn { padding: 0.5rem 1rem; }
 
 .hero {
-    margin: 0 0.75rem;
+    --frame: clamp(1rem, 3.5vw, 3.5rem);
+    margin: calc(var(--frame) * 0.6) var(--frame) 0;
     border-radius: var(--r-lg);
     border-bottom: none;
-    height: calc(100svh - 64px - 0.75rem);
+    height: calc(100svh - 64px - var(--frame) * 1.2);
 }
 .hero-foot .btn-outline { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
 
@@ -448,7 +449,7 @@ body.modal-open { overflow: hidden; }
 
     .sec, .about-grid { grid-template-columns: 1fr; }
     .about-photo { aspect-ratio: 1; max-width: 420px; }
-    .hero { height: 78svh; margin: 0 0.5rem; border-radius: var(--r); }
+    .hero { height: 74svh; --frame: 1rem; border-radius: var(--r); }
     .cols, .cols.two, .articles { grid-template-columns: 1fr; }
     .row { grid-template-columns: 1fr; gap: 0.25rem; }
     .logo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
