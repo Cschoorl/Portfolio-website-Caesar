@@ -1,36 +1,28 @@
 {
   "rewrites": [
     {
-      "source": "/whatido",
-      "destination": "/whatido.html"
-    },
-    {
-      "source": "/portfolio",
-      "destination": "/portfolio.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
-      "source": "/contact",
-      "destination": "/contact.html"
-    },
-    {
       "source": "/en",
       "destination": "/en/index.html"
     },
     {
-      "source": "/en/whatido",
-      "destination": "/en/whatido.html"
+      "source": "/diensten",
+      "destination": "/diensten.html"
     },
     {
-      "source": "/en/portfolio",
-      "destination": "/en/portfolio.html"
+      "source": "/en/services",
+      "destination": "/en/services.html"
     },
     {
-      "source": "/en/blog",
-      "destination": "/en/blog.html"
+      "source": "/klanten",
+      "destination": "/klanten.html"
+    },
+    {
+      "source": "/en/clients",
+      "destination": "/en/clients.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
     },
     {
       "source": "/en/contact",
@@ -39,18 +31,23 @@
   ],
   "redirects": [
     {
-      "source": "/whatido.html",
-      "destination": "/whatido",
+      "source": "/diensten.html",
+      "destination": "/diensten",
       "permanent": true
     },
     {
-      "source": "/portfolio.html",
-      "destination": "/portfolio",
+      "source": "/en/services.html",
+      "destination": "/en/services",
       "permanent": true
     },
     {
-      "source": "/blog.html",
-      "destination": "/blog",
+      "source": "/klanten.html",
+      "destination": "/klanten",
+      "permanent": true
+    },
+    {
+      "source": "/en/clients.html",
+      "destination": "/en/clients",
       "permanent": true
     },
     {
@@ -59,23 +56,68 @@
       "permanent": true
     },
     {
+      "source": "/en/contact.html",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/whatido",
+      "destination": "/diensten",
+      "permanent": true
+    },
+    {
+      "source": "/whatido.html",
+      "destination": "/diensten",
+      "permanent": true
+    },
+    {
+      "source": "/en/whatido",
+      "destination": "/en/services",
+      "permanent": true
+    },
+    {
       "source": "/en/whatido.html",
-      "destination": "/en/whatido",
+      "destination": "/en/services",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/klanten",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/klanten",
+      "permanent": true
+    },
+    {
+      "source": "/en/portfolio",
+      "destination": "/en/clients",
       "permanent": true
     },
     {
       "source": "/en/portfolio.html",
-      "destination": "/en/portfolio",
+      "destination": "/en/clients",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en",
       "permanent": true
     },
     {
       "source": "/en/blog.html",
-      "destination": "/en/blog",
-      "permanent": true
-    },
-    {
-      "source": "/en/contact.html",
-      "destination": "/en/contact",
+      "destination": "/en",
       "permanent": true
     }
   ]

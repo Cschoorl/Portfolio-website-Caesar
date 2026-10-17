@@ -1,22 +1,30 @@
-# Netlify redirects - Remove .html extension from URLs
-/whatido /whatido.html 200
-/portfolio /portfolio.html 200
-/blog /blog.html 200
-/contact /contact.html 200
-
-# Redirect old .html URLs to clean URLs
-/whatido.html /whatido 301
-/portfolio.html /portfolio 301
-/blog.html /blog 301
-/contact.html /contact 301
-
-# English version
+# Netlify redirects - clean URLs
 /en /en/index.html 200
-/en/whatido /en/whatido.html 200
-/en/portfolio /en/portfolio.html 200
-/en/blog /en/blog.html 200
+/diensten /diensten.html 200
+/en/services /en/services.html 200
+/klanten /klanten.html 200
+/en/clients /en/clients.html 200
+/contact /contact.html 200
 /en/contact /en/contact.html 200
-/en/whatido.html /en/whatido 301
-/en/portfolio.html /en/portfolio 301
-/en/blog.html /en/blog 301
+
+# Redirect .html URLs to clean URLs
+/diensten.html /diensten 301
+/en/services.html /en/services 301
+/klanten.html /klanten 301
+/en/clients.html /en/clients 301
+/contact.html /contact 301
 /en/contact.html /en/contact 301
+
+# Old page URLs
+/whatido /diensten 301
+/whatido.html /diensten 301
+/en/whatido /en/services 301
+/en/whatido.html /en/services 301
+/portfolio /klanten 301
+/portfolio.html /klanten 301
+/en/portfolio /en/clients 301
+/en/portfolio.html /en/clients 301
+/blog / 301
+/blog.html / 301
+/en/blog /en 301
+/en/blog.html /en 301

@@ -219,6 +219,7 @@ h3, .h3 {
 }
 .sec:last-child { border-bottom: none; }
 .sec > * { min-width: 0; }
+.sec[id] { scroll-margin-top: 64px; }
 .sec-label h2 { font-size: 1rem; font-weight: 700; letter-spacing: 0; margin-bottom: 0.35rem; }
 .sec-label .label { max-width: 14rem; }
 .sec-body > .h2 { max-width: 24ch; margin-bottom: 1.25rem; }
