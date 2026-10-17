@@ -11,6 +11,10 @@
     --grey-2: #c4c4c4;
     --line:  rgba(255, 255, 255, 0.16);
     --panel: #0f0f0f;
+    --header-bg: rgba(0, 0, 0, 0.88);
+    --line-strong: rgba(255, 255, 255, 0.35);
+    --focus: rgba(255, 255, 255, 0.6);
+    --placeholder: #5a5a5a;
 
     --r-lg: 24px;
     --r:    16px;
@@ -20,6 +24,20 @@
 
     --wrap: 1240px;
     --gut:  clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Light theme: --black/--white act as background/foreground, so swapping them flips the site */
+:root[data-theme="light"] {
+    --black: #fff;
+    --white: #000;
+    --grey:  #6e6e6e;
+    --grey-2: #3a3a3a;
+    --line:  rgba(0, 0, 0, 0.14);
+    --panel: #f4f4f2;
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --line-strong: rgba(0, 0, 0, 0.35);
+    --focus: rgba(0, 0, 0, 0.6);
+    --placeholder: #9a9a9a;
 }
 
 /* ===== Reset ===== */
@@ -104,7 +122,7 @@ h3, .h3 {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.88);
+    background: var(--header-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
@@ -122,6 +140,8 @@ h3, .h3 {
 .nav a:hover, .nav a.active { color: var(--white); }
 .nav .btn { color: var(--black); padding: 0.5rem 0.9rem; font-size: 0.9375rem; }
 .nav .btn:hover { color: var(--white); }
+.nav .btn.active { color: var(--black); }
+.nav .btn.active:hover { color: var(--white); }
 .nav { margin-left: auto; }
 .header-end { display: flex; align-items: center; gap: 0.75rem; }
 .lang-switch {
@@ -155,7 +175,8 @@ h3, .h3 {
 .page-head .label { margin-bottom: 1.25rem; }
 .page-head h1 { max-width: 16ch; margin-bottom: 1.5rem; }
 
-/* Home hero: video background with the giant name */
+/* Home hero: video background with the giant name.
+   It keeps the dark palette in both themes so text stays readable on the video. */
 .hero {
     position: relative;
     height: calc(100svh - 64px);
@@ -301,7 +322,8 @@ h3, .h3 {
 /* ===== Cases (work) ===== */
 .case-logo {
     height: 180px;
-    background: var(--white);
+    background: #fff;
+    border: 1px solid var(--line);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,7 +364,7 @@ h3, .h3 {
     padding: 0.5rem 0;
 }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--white); }
-.field input::placeholder, .field textarea::placeholder { color: #5a5a5a; }
+.field input::placeholder, .field textarea::placeholder { color: var(--placeholder); }
 .field textarea { min-height: 130px; resize: vertical; }
 .form-success { display: none; }
 
@@ -377,13 +399,13 @@ h3, .h3 {
     transition: opacity 0.2s, visibility 0.2s;
 }
 .modal-overlay.active { opacity: 1; visibility: visible; }
-.modal-content { position: relative; width: 100%; max-width: 680px; max-height: 90vh; overflow: hidden; background: var(--white); }
+.modal-content { position: relative; width: 100%; max-width: 680px; max-height: 90vh; overflow: hidden; background: #fff; }
 .modal-close {
     position: absolute;
     top: 0; right: 0;
     z-index: 10;
-    background: var(--black);
-    color: var(--white);
+    background: #000;
+    color: #fff;
     border: none;
     padding: 0.7rem 1rem;
     font-size: 0.9375rem;
@@ -425,7 +447,7 @@ body.modal-open { overflow: hidden; }
     padding: 1.5rem;
     transition: border-color 0.2s;
 }
-.item:hover { border-color: rgba(255, 255, 255, 0.35); }
+.item:hover { border-color: var(--line-strong); }
 .cols { gap: 1rem; }
 
 /* Logo tiles instead of a shared grid */
@@ -444,7 +466,7 @@ body.modal-open { overflow: hidden; }
     padding: 0.8rem 1rem;
     font-size: 1.0625rem;
 }
-.field input:focus, .field textarea:focus { border-color: rgba(255, 255, 255, 0.6); }
+.field input:focus, .field textarea:focus { border-color: var(--focus); }
 
 /* ===== Responsive ===== */
 @media (max-width: 1024px) {
@@ -488,3 +510,35 @@ body.modal-open { overflow: hidden; }
 /* ===== Quote ===== */
 .quote { margin: 0; }
 .quote p { text-indent: -0.42em; }   /* let the opening quote hang in the margin */
+
+/* ===== Theme toggle ===== */
+.hero {
+    --black: #000;
+    --white: #fff;
+    --line: rgba(255, 255, 255, 0.16);
+    color: #fff;
+}
+.theme-switch {
+    display: inline-flex;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+}
+.theme-switch button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 26px;
+    border: none;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--grey-2);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+}
+.theme-switch button:hover { color: var(--white); }
+.theme-switch button[aria-pressed="true"] { background: var(--white); color: var(--black); }
+
+/* Logos: inverted to white on dark, natural grey on light */
+:root[data-theme="light"] .logo-cell img { filter: grayscale(1) contrast(1.2); mix-blend-mode: multiply; }

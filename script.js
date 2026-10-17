@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu();
+    initTheme();
     initSmoothScroll();
     initHeroName();
     initReveal();
@@ -9,6 +10,27 @@ document.addEventListener('DOMContentLoaded', () => {
     initCalendlyModal();
     initContactSuccess();
 });
+
+// Light / dark theme switch. Dark is the default; the choice is remembered.
+function initTheme() {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('[data-theme-choice]');
+    const meta = document.querySelector('meta[name="theme-color"]');
+
+    const apply = (theme) => {
+        if (theme === 'light') root.dataset.theme = 'light';
+        else delete root.dataset.theme;
+        buttons.forEach(b => b.setAttribute('aria-pressed', b.dataset.themeChoice === theme));
+        if (meta) meta.setAttribute('content', theme === 'light' ? '#ffffff' : '#000000');
+    };
+
+    apply(root.dataset.theme === 'light' ? 'light' : 'dark');
+    buttons.forEach(b => b.addEventListener('click', () => {
+        const theme = b.dataset.themeChoice;
+        apply(theme);
+        try { localStorage.setItem('theme', theme); } catch (e) {}
+    }));
+}
 
 // Mobile menu
 function initMenu() {
