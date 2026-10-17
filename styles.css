@@ -554,3 +554,8 @@ body.modal-open { overflow: hidden; }
 .logo-cell { background: #fff; color: #111; border-color: var(--line); }
 .logo-cell img,
 :root[data-theme="light"] .logo-cell img { filter: none; mix-blend-mode: normal; opacity: 1; max-height: 52px; }
+
+/* Linked client logos */
+a.logo-cell, a.case-logo { text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+a.logo-cell:hover, a.case-logo:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+a.logo-cell:focus-visible, a.case-logo:focus-visible { outline: 2px solid var(--white); outline-offset: 3px; }
