@@ -483,3 +483,7 @@ body.modal-open { overflow: hidden; }
     .footer-grid { grid-template-columns: 1fr 1fr; }
     .footer-grid > :first-child { grid-column: 1 / -1; }
 }
+
+/* ===== Quote ===== */
+.quote { margin: 0; }
+.quote p { text-indent: -0.42em; }   /* let the opening quote hang in the margin */
