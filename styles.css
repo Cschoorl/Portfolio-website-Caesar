@@ -542,3 +542,10 @@ body.modal-open { overflow: hidden; }
 
 /* Logos: inverted to white on dark, natural grey on light */
 :root[data-theme="light"] .logo-cell img { filter: grayscale(1) contrast(1.2); mix-blend-mode: multiply; }
+
+/* Header spans the full width so the nav sits closer to the right edge */
+.header .wrap { max-width: none; }
+
+/* Focus ring only for keyboard users, not after a mouse click */
+.theme-switch button:focus:not(:focus-visible),
+.lang-switch a:focus:not(:focus-visible) { outline: none; }
