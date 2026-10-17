@@ -549,3 +549,8 @@ body.modal-open { overflow: hidden; }
 /* Focus ring only for keyboard users, not after a mouse click */
 .theme-switch button:focus:not(:focus-visible),
 .lang-switch a:focus:not(:focus-visible) { outline: none; }
+
+/* Client logos in full colour on white tiles (both themes) */
+.logo-cell { background: #fff; color: #111; border-color: var(--line); }
+.logo-cell img,
+:root[data-theme="light"] .logo-cell img { filter: none; mix-blend-mode: normal; opacity: 1; max-height: 52px; }
