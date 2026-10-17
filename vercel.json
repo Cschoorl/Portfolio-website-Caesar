@@ -1,12 +1,28 @@
 {
   "rewrites": [
     {
-      "source": "/contact",
-      "destination": "/contact.html"
-    },
-    {
       "source": "/en",
       "destination": "/en/index.html"
+    },
+    {
+      "source": "/diensten",
+      "destination": "/diensten.html"
+    },
+    {
+      "source": "/en/services",
+      "destination": "/en/services.html"
+    },
+    {
+      "source": "/klanten",
+      "destination": "/klanten.html"
+    },
+    {
+      "source": "/en/clients",
+      "destination": "/en/clients.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
     },
     {
       "source": "/en/contact",
@@ -14,6 +30,26 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/diensten.html",
+      "destination": "/diensten",
+      "permanent": true
+    },
+    {
+      "source": "/en/services.html",
+      "destination": "/en/services",
+      "permanent": true
+    },
+    {
+      "source": "/klanten.html",
+      "destination": "/klanten",
+      "permanent": true
+    },
+    {
+      "source": "/en/clients.html",
+      "destination": "/en/clients",
+      "permanent": true
+    },
     {
       "source": "/contact.html",
       "destination": "/contact",
@@ -26,42 +62,42 @@
     },
     {
       "source": "/whatido",
-      "destination": "/#diensten",
+      "destination": "/diensten",
       "permanent": true
     },
     {
       "source": "/whatido.html",
-      "destination": "/#diensten",
+      "destination": "/diensten",
       "permanent": true
     },
     {
       "source": "/en/whatido",
-      "destination": "/en#services",
+      "destination": "/en/services",
       "permanent": true
     },
     {
       "source": "/en/whatido.html",
-      "destination": "/en#services",
+      "destination": "/en/services",
       "permanent": true
     },
     {
       "source": "/portfolio",
-      "destination": "/#klanten",
+      "destination": "/klanten",
       "permanent": true
     },
     {
       "source": "/portfolio.html",
-      "destination": "/#klanten",
+      "destination": "/klanten",
       "permanent": true
     },
     {
       "source": "/en/portfolio",
-      "destination": "/en#clients",
+      "destination": "/en/clients",
       "permanent": true
     },
     {
       "source": "/en/portfolio.html",
-      "destination": "/en#clients",
+      "destination": "/en/clients",
       "permanent": true
     },
     {

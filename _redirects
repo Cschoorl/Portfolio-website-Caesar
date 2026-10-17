@@ -1,21 +1,29 @@
 # Netlify redirects - clean URLs
-/contact /contact.html 200
 /en /en/index.html 200
+/diensten /diensten.html 200
+/en/services /en/services.html 200
+/klanten /klanten.html 200
+/en/clients /en/clients.html 200
+/contact /contact.html 200
 /en/contact /en/contact.html 200
 
 # Redirect .html URLs to clean URLs
+/diensten.html /diensten 301
+/en/services.html /en/services 301
+/klanten.html /klanten 301
+/en/clients.html /en/clients 301
 /contact.html /contact 301
 /en/contact.html /en/contact 301
 
-# Old pages now live as sections on the home page
-/whatido /#diensten 301
-/whatido.html /#diensten 301
-/en/whatido /en#services 301
-/en/whatido.html /en#services 301
-/portfolio /#klanten 301
-/portfolio.html /#klanten 301
-/en/portfolio /en#clients 301
-/en/portfolio.html /en#clients 301
+# Old page URLs
+/whatido /diensten 301
+/whatido.html /diensten 301
+/en/whatido /en/services 301
+/en/whatido.html /en/services 301
+/portfolio /klanten 301
+/portfolio.html /klanten 301
+/en/portfolio /en/clients 301
+/en/portfolio.html /en/clients 301
 /blog / 301
 /blog.html / 301
 /en/blog /en 301
