@@ -454,6 +454,7 @@ body.modal-open { overflow: hidden; }
 }
 @media (max-width: 820px) {
     .menu-btn { display: block; }
+    .header-end { margin-left: auto; }
     .nav {
         display: none;
         position: absolute;
