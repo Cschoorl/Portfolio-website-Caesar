@@ -1,18 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/whatido",
-      "destination": "/whatido.html"
-    },
-    {
-      "source": "/portfolio",
-      "destination": "/portfolio.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
       "source": "/contact",
       "destination": "/contact.html"
     },
@@ -21,61 +9,79 @@
       "destination": "/en/index.html"
     },
     {
-      "source": "/en/whatido",
-      "destination": "/en/whatido.html"
-    },
-    {
-      "source": "/en/portfolio",
-      "destination": "/en/portfolio.html"
-    },
-    {
-      "source": "/en/blog",
-      "destination": "/en/blog.html"
-    },
-    {
       "source": "/en/contact",
       "destination": "/en/contact.html"
     }
   ],
   "redirects": [
     {
-      "source": "/whatido.html",
-      "destination": "/whatido",
-      "permanent": true
-    },
-    {
-      "source": "/portfolio.html",
-      "destination": "/portfolio",
-      "permanent": true
-    },
-    {
-      "source": "/blog.html",
-      "destination": "/blog",
-      "permanent": true
-    },
-    {
       "source": "/contact.html",
       "destination": "/contact",
       "permanent": true
     },
     {
+      "source": "/en/contact.html",
+      "destination": "/en/contact",
+      "permanent": true
+    },
+    {
+      "source": "/whatido",
+      "destination": "/#diensten",
+      "permanent": true
+    },
+    {
+      "source": "/whatido.html",
+      "destination": "/#diensten",
+      "permanent": true
+    },
+    {
+      "source": "/en/whatido",
+      "destination": "/en#services",
+      "permanent": true
+    },
+    {
       "source": "/en/whatido.html",
-      "destination": "/en/whatido",
+      "destination": "/en#services",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/#klanten",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/#klanten",
+      "permanent": true
+    },
+    {
+      "source": "/en/portfolio",
+      "destination": "/en#clients",
       "permanent": true
     },
     {
       "source": "/en/portfolio.html",
-      "destination": "/en/portfolio",
+      "destination": "/en#clients",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en",
       "permanent": true
     },
     {
       "source": "/en/blog.html",
-      "destination": "/en/blog",
-      "permanent": true
-    },
-    {
-      "source": "/en/contact.html",
-      "destination": "/en/contact",
+      "destination": "/en",
       "permanent": true
     }
   ]
