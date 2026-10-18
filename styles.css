@@ -726,3 +726,24 @@ a.item-link:hover { transform: translateY(-3px); border-color: var(--line-strong
     .sec-body .photo-strip { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.75rem; padding-top: 1.25rem; }
     .sec-body .photo-strip figure, .sec-body .photo-strip figure:last-child { aspect-ratio: 4 / 5; border-radius: var(--r); }
 }
+
+/* About: text only, photos in an editorial collage below (Norrsken-style) */
+.about-solo { grid-template-columns: minmax(0, 1fr); max-width: 52rem; }
+.collage {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+    padding: 0 12px clamp(3rem, 6vw, 5rem); align-items: start;
+}
+.collage figure { margin: 0; overflow: hidden; border-radius: var(--r-sm); background: var(--panel); }
+.collage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.collage .c-room { aspect-ratio: 1 / 1; }
+.collage-mid { padding-top: 18%; }
+.collage .c-speak { aspect-ratio: 1 / 1; }
+.collage .c-profile { aspect-ratio: 3 / 4; }
+.collage .c-profile img { object-position: 40% center; }
+@media (max-width: 700px) {
+    .collage { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding: 0 8px 3rem; }
+    .collage-col:first-child { grid-column: 1 / -1; }
+    .collage .c-room { aspect-ratio: 3 / 2; }
+    .collage-mid { padding-top: 0; }
+    .collage .c-speak, .collage .c-profile { aspect-ratio: 4 / 5; }
+}
