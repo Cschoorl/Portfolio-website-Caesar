@@ -721,3 +721,8 @@ a.item-link:hover { transform: translateY(-3px); border-color: var(--line-strong
     .photo-strip { grid-template-columns: minmax(0, 1fr); }
     .photo-strip figure:last-child { aspect-ratio: 3 / 2; }
 }
+.sec-body .photo-strip { padding-top: clamp(2rem, 4vw, 3rem); }
+@media (max-width: 700px) {
+    .sec-body .photo-strip { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.75rem; padding-top: 1.25rem; }
+    .sec-body .photo-strip figure, .sec-body .photo-strip figure:last-child { aspect-ratio: 4 / 5; border-radius: var(--r); }
+}
