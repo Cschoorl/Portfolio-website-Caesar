@@ -747,3 +747,53 @@ a.item-link:hover { transform: translateY(-3px); border-color: var(--line-strong
     .collage-mid { padding-top: 0; }
     .collage .c-speak, .collage .c-profile { aspect-ratio: 4 / 5; }
 }
+
+/* ---------- Name notch (MacBook-style) ---------- */
+.name-notch, .name-fly { --nn-size: clamp(22px, 2.4vw, 34px); }
+.name-notch {
+    --q: 0;
+    position: fixed; z-index: 101; top: 63px; left: 50%;
+    transform: translate(-50%, calc((var(--q) - 1) * 100%));
+    padding: 0.55rem 1.6rem 0.8rem;
+    background: #000; color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.16); border-top: none;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    opacity: var(--q);
+    pointer-events: none;
+    text-decoration: none;
+    transition: background .2s;
+}
+.name-notch::before, .name-notch::after {
+    /* little inverted corners so the notch flows out of the bar */
+    content: ""; position: absolute; top: 0; width: 14px; height: 14px; pointer-events: none;
+    background: radial-gradient(circle at var(--cx) 100%, transparent 13px, #000 14px);
+}
+.name-notch::before { left: -14px; --cx: 0%; }
+.name-notch::after { right: -14px; --cx: 100%; }
+.nn-text {
+    display: block; font-weight: 700; font-size: var(--nn-size); line-height: 1;
+    letter-spacing: -0.035em; white-space: nowrap;
+}
+.notch-js .nn-text { visibility: hidden; }
+.notch-docked .name-notch { pointer-events: auto; }
+.notch-docked .name-notch:hover { background: #111; }
+.notch-docked:not(.notch-js) .name-notch { --q: 1; }
+.notch-docked:not(.notch-js) .nn-text { visibility: visible; }
+
+.name-fly {
+    position: fixed; z-index: 102; top: 0; left: 0;
+    transform-origin: 0 0;
+    font-weight: 700; font-size: var(--nn-size); line-height: 1;
+    letter-spacing: -0.035em; white-space: nowrap; color: #fff;
+    pointer-events: none; will-change: transform;
+}
+.notch-js .hero-name span { visibility: hidden; }
+
+/* Hide while the mobile menu is open */
+body:has(.nav.open) .name-notch, body:has(.nav.open) .name-fly { opacity: 0 !important; pointer-events: none; }
+
+@media (max-width: 700px) {
+    .name-notch { padding: 0.45rem 1.1rem 0.65rem; border-radius: 0 0 16px 16px; }
+}
+.nn-text, .name-fly { line-height: 0.85; letter-spacing: -0.045em; }
