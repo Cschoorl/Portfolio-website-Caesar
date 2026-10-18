@@ -797,3 +797,8 @@ body:has(.nav.open) .name-notch, body:has(.nav.open) .name-fly { opacity: 0 !imp
     .name-notch { padding: 0.45rem 1.1rem 0.65rem; border-radius: 0 0 16px 16px; }
 }
 .nn-text, .name-fly { line-height: 0.85; letter-spacing: -0.045em; }
+/* Notch: simple drop-in, no morphing text */
+.name-notch { transition: transform .45s cubic-bezier(.2,.8,.2,1), opacity .3s ease, background .2s; }
+.name-notch .nn-text { visibility: visible; }
+.notch-docked .name-notch { --q: 1; }
+@media (prefers-reduced-motion: reduce) { .name-notch { transition: none; } }
