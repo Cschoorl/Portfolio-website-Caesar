@@ -683,3 +683,24 @@ a.logo-cell:focus-visible, a.case-logo:focus-visible { outline: 2px solid var(--
         radial-gradient(70% 90% at 15% 0%, var(--glow-1), transparent 65%),
         linear-gradient(160deg, var(--glass-strong), var(--glass));
 }
+
+/* "How it works": vertical step-by-step timeline */
+.steps { grid-template-columns: minmax(0, 1fr); gap: 1rem; position: relative; padding-left: 4rem; counter-reset: none; }
+.steps::before {
+    content: ""; position: absolute; left: 1.25rem; top: 1.5rem; bottom: 1.5rem;
+    width: 1px; background: linear-gradient(var(--line-strong), var(--line));
+}
+.steps li { position: relative; padding: 1.5rem 1.75rem; }
+.steps .step-num {
+    position: absolute; left: -4rem; top: 1.25rem; margin: 0;
+    width: 2.5rem; height: 2.5rem; border-radius: 999px; display: grid; place-items: center;
+    background: var(--white); color: var(--black); font-size: 0.875rem; font-weight: 700;
+    box-shadow: 0 0 0 6px var(--black);
+}
+.steps h3 { margin-bottom: 0.4rem; }
+@media (max-width: 560px) {
+    .steps { padding-left: 3.25rem; }
+    .steps::before { left: 1rem; }
+    .steps .step-num { left: -3.25rem; width: 2rem; height: 2rem; font-size: 0.8125rem; }
+    .steps li { padding: 1.25rem; }
+}
