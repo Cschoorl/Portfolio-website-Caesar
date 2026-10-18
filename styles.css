@@ -628,3 +628,22 @@ a.logo-cell:focus-visible, a.case-logo:focus-visible { outline: 2px solid var(--
 @media (max-width: 560px) { .svc-main h2 { font-size: clamp(1.6rem, 8vw, 2rem); } }
 .svc-main h2 { overflow-wrap: break-word; }
 @media (max-width: 560px) { .svc { padding: 1.5rem; } .svc-main h2 { font-size: clamp(1.45rem, 6.8vw, 2rem); } }
+
+/* ---------- White accents: .invert flips the palette locally ---------- */
+.invert {
+    --black: #fff; --white: #000; --grey: #6e6e6e; --grey-2: #3a3a3a;
+    --line: rgba(0, 0, 0, 0.14); --line-strong: rgba(0, 0, 0, 0.35);
+    --panel: #f4f4f2; --focus: rgba(0, 0, 0, 0.6);
+    background: var(--black); color: var(--white);
+}
+:root[data-theme="light"] .invert {
+    --black: #000; --white: #fff; --grey: #8c8c8c; --grey-2: #c4c4c4;
+    --line: rgba(255, 255, 255, 0.16); --line-strong: rgba(255, 255, 255, 0.35);
+    --panel: #141414; --focus: rgba(255, 255, 255, 0.6);
+}
+.band { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.band .sec { border-bottom: none; }
+.cta.invert { border-top: none; }
+.svc.invert { border-color: transparent; }
+.invert .item { background: var(--panel); }
+.invert .logo-cell, .invert .case-logo { border: 1px solid var(--line); }
