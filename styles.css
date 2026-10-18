@@ -710,3 +710,14 @@ a.item-link { color: inherit; text-decoration: none; transition: transform .25s 
 a.item-link:hover { transform: translateY(-3px); border-color: var(--line-strong); }
 .item-more { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: auto; padding-top: 1.25rem; font-size: 0.9375rem; color: var(--white); }
 .footer li a { overflow-wrap: anywhere; }
+
+/* Photo strip on the services page */
+.photo-strip { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.25rem; padding-top: clamp(3rem, 6vw, 5rem); }
+.photo-strip figure { margin: 0; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--glass-border); aspect-ratio: 3 / 2; }
+.photo-strip figure:last-child { aspect-ratio: auto; }
+.photo-strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-strip + .svc-list { padding-top: 1.25rem; }
+@media (max-width: 700px) {
+    .photo-strip { grid-template-columns: minmax(0, 1fr); }
+    .photo-strip figure:last-child { aspect-ratio: 3 / 2; }
+}
