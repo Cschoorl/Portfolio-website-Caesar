@@ -704,3 +704,9 @@ a.logo-cell:focus-visible, a.case-logo:focus-visible { outline: 2px solid var(--
     .steps .step-num { left: -3.25rem; width: 2rem; height: 2rem; font-size: 0.8125rem; }
     .steps li { padding: 1.25rem; }
 }
+
+/* Clickable service cards on the homepage */
+a.item-link { color: inherit; text-decoration: none; transition: transform .25s ease, border-color .25s ease; }
+a.item-link:hover { transform: translateY(-3px); border-color: var(--line-strong); }
+.item-more { display: inline-flex; align-items: center; gap: 0.45rem; margin-top: auto; padding-top: 1.25rem; font-size: 0.9375rem; color: var(--white); }
+.footer li a { overflow-wrap: anywhere; }
