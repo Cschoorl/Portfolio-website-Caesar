@@ -108,69 +108,29 @@ function initHeroName() {
     if (document.fonts) document.fonts.ready.then(fit);
 }
 
-// The big hero name shrinks into a MacBook-style notch at the top while scrolling.
-// The notch stays put and works as a home / back-to-top button.
+// MacBook-style notch with the name at the top of the screen. It works as a
+// home / back-to-top button and drops in once you scroll past the hero.
 function initNameNotch() {
     const notch = document.querySelector('.name-notch');
     if (!notch) return;
-    const notchText = notch.querySelector('.nn-text');
-    const heroSpan = document.querySelector('.hero-name span');
+    const hero = document.querySelector('.hero');
     const root = document.documentElement;
 
-    // Subpages: the notch is simply always there and links home.
-    if (!heroSpan) { root.classList.add('notch-docked'); return; }
+    // Subpages: the notch is always there and links home.
+    if (!hero) { root.classList.add('notch-docked'); return; }
 
     notch.addEventListener('click', (e) => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    const fly = document.createElement('div');
-    fly.className = 'name-fly';
-    fly.setAttribute('aria-hidden', 'true');
-    fly.textContent = heroSpan.textContent;
-    document.body.appendChild(fly);
-    root.classList.add('notch-js');
-
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let start = null, target = null, dist = 1;
-
-    const measure = () => {
-        const prevY = window.scrollY;
-        const h = heroSpan.getBoundingClientRect();
-        start = { x: h.left, y: h.top + prevY, w: h.width };
-        // Measure the text where it sits once the notch is fully down.
-        const prevQ = notch.style.getPropertyValue('--q');
-        notch.style.setProperty('--q', '1');
-        const t = notchText.getBoundingClientRect();
-        notch.style.setProperty('--q', prevQ || '0');
-        target = { x: t.left, y: t.top, w: t.width };
-        dist = Math.max(200, window.innerHeight * 0.55);
-        update();
-    };
-
-    const ease = (p) => p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
-
     const update = () => {
-        if (!start || !target.w) return;
-        let p = Math.min(1, Math.max(0, window.scrollY / dist));
-        if (reduce) p = p > 0.5 ? 1 : 0;
-        const e = ease(p);
-        const s0 = start.w / target.w;
-        const scale = s0 + (1 - s0) * e;
-        const x = start.x + (target.x - start.x) * e;
-        const y = start.y + (target.y - start.y) * e;
-        fly.style.transform = `translate(${x}px, ${y}px) scale(${scale})`;
-        const q = Math.min(1, Math.max(0, (p - 0.55) / 0.45));
-        notch.style.setProperty('--q', q.toFixed(3));
-        root.classList.toggle('notch-docked', p >= 0.98);
+        const show = window.scrollY > hero.offsetTop + hero.offsetHeight * 0.6;
+        root.classList.toggle('notch-docked', show);
     };
-
     window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', measure);
-    if (document.fonts) document.fonts.ready.then(measure);
-    window.addEventListener('load', measure);
-    measure();
+    window.addEventListener('resize', update);
+    update();
 }
 
 // Fade elements in as they enter the viewport
